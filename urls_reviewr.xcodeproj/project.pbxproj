@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205517B18BFC003F4B54 /* MenuViewController.m */; };
+		3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205617B18BFC003F4B54 /* MenuViewController.xib */; };
+		3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205A17B18C3E003F4B54 /* MenuItemViewController.m */; };
+		3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */; };
+		3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205F17B18C77003F4B54 /* MenuItemCell.m */; };
 		30AA83EA17A9F2F700B6BCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83E917A9F2F700B6BCE2 /* Foundation.framework */; };
 		30AA83EC17A9F2F700B6BCE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83EB17A9F2F700B6BCE2 /* CoreGraphics.framework */; };
 		30AA83EE17A9F2F700B6BCE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83ED17A9F2F700B6BCE2 /* UIKit.framework */; };
@@ -35,6 +40,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3060205417B18BFC003F4B54 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		3060205517B18BFC003F4B54 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		3060205617B18BFC003F4B54 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		3060205917B18C3E003F4B54 /* MenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemViewController.h; sourceTree = "<group>"; };
+		3060205A17B18C3E003F4B54 /* MenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemViewController.m; sourceTree = "<group>"; };
+		3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemViewController.xib; sourceTree = "<group>"; };
+		3060205E17B18C77003F4B54 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
+		3060205F17B18C77003F4B54 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
+		3060206117B18C88003F4B54 /* MenuItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
+		3060206217B19190003F4B54 /* 5stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5stars.png; path = ../../../../../../Desktop/5stars.png; sourceTree = "<group>"; };
 		30AA83E617A9F2F700B6BCE2 /* urls_reviewr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urls_reviewr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AA83E917A9F2F700B6BCE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30AA83EB17A9F2F700B6BCE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,6 +135,15 @@
 				30AA840017A9F2F700B6BCE2 /* Images.xcassets */,
 				30AA83FD17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld */,
 				30AA83F217A9F2F700B6BCE2 /* Supporting Files */,
+				3060205417B18BFC003F4B54 /* MenuViewController.h */,
+				3060205517B18BFC003F4B54 /* MenuViewController.m */,
+				3060205617B18BFC003F4B54 /* MenuViewController.xib */,
+				3060205917B18C3E003F4B54 /* MenuItemViewController.h */,
+				3060205A17B18C3E003F4B54 /* MenuItemViewController.m */,
+				3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */,
+				3060205E17B18C77003F4B54 /* MenuItemCell.h */,
+				3060205F17B18C77003F4B54 /* MenuItemCell.m */,
+				3060206117B18C88003F4B54 /* MenuItemCell.xib */,
 			);
 			path = urls_reviewr;
 			sourceTree = "<group>";
@@ -127,6 +151,7 @@
 		30AA83F217A9F2F700B6BCE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3060206217B19190003F4B54 /* 5stars.png */,
 				30AA83F317A9F2F700B6BCE2 /* urls_reviewr-Info.plist */,
 				30AA83F417A9F2F700B6BCE2 /* InfoPlist.strings */,
 				30AA83F717A9F2F700B6BCE2 /* main.m */,
@@ -229,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				30AA83F617A9F2F700B6BCE2 /* InfoPlist.strings in Resources */,
+				3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */,
+				3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */,
 				30AA840117A9F2F700B6BCE2 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +278,9 @@
 				30AA83FF17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld in Sources */,
 				30AA83FC17A9F2F700B6BCE2 /* AppDelegate.m in Sources */,
 				30AA83F817A9F2F700B6BCE2 /* main.m in Sources */,
+				3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */,
+				3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */,
+				3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +477,7 @@
 				30AA841A17A9F2F700B6BCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		30AA841B17A9F2F700B6BCE2 /* Build configuration list for PBXNativeTarget "urls_reviewrTests" */ = {
 			isa = XCConfigurationList;
@@ -455,6 +486,7 @@
 				30AA841D17A9F2F700B6BCE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
