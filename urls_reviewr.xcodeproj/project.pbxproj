@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */; };
+		301E648917B1BB5F00FDCC67 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */; };
 		3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205517B18BFC003F4B54 /* MenuViewController.m */; };
 		3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205617B18BFC003F4B54 /* MenuViewController.xib */; };
 		3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205A17B18C3E003F4B54 /* MenuItemViewController.m */; };
@@ -27,6 +29,15 @@
 		30AA840B17A9F2F700B6BCE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83EF17A9F2F700B6BCE2 /* CoreData.framework */; };
 		30AA841317A9F2F700B6BCE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30AA841117A9F2F700B6BCE2 /* InfoPlist.strings */; };
 		30AA841517A9F2F700B6BCE2 /* urls_reviewrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA841417A9F2F700B6BCE2 /* urls_reviewrTests.m */; };
+		30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */; };
+		30DFA90017B1BD3D00B729FB /* BuildingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */; };
+		30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */; };
+		30DFA90517B1BD5900B729FB /* MenuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA90317B1BD5900B729FB /* MenuListViewController.m */; };
+		30DFA90617B1BD5900B729FB /* MenuListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90417B1BD5900B729FB /* MenuListViewController.xib */; };
+		30DFA90A17B1BD7C00B729FB /* AccountSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA90817B1BD7C00B729FB /* AccountSetupViewController.m */; };
+		30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */; };
+		30DFA90F17B1BE4C00B729FB /* AddRatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */; };
+		30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCommentCell.xib; sourceTree = "<group>"; };
+		301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 		3060205417B18BFC003F4B54 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		3060205517B18BFC003F4B54 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		3060205617B18BFC003F4B54 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -48,7 +61,6 @@
 		3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemViewController.xib; sourceTree = "<group>"; };
 		3060205E17B18C77003F4B54 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		3060205F17B18C77003F4B54 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
-		3060206117B18C88003F4B54 /* MenuItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
 		3060206217B19190003F4B54 /* 5stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5stars.png; path = ../../../../../../Desktop/5stars.png; sourceTree = "<group>"; };
 		30AA83E617A9F2F700B6BCE2 /* urls_reviewr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urls_reviewr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AA83E917A9F2F700B6BCE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,6 +80,21 @@
 		30AA841017A9F2F700B6BCE2 /* urls_reviewrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "urls_reviewrTests-Info.plist"; sourceTree = "<group>"; };
 		30AA841217A9F2F700B6BCE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		30AA841417A9F2F700B6BCE2 /* urls_reviewrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = urls_reviewrTests.m; sourceTree = "<group>"; };
+		30DFA8FA17B1BD0700B729FB /* ReviewCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCommentCell.h; sourceTree = "<group>"; };
+		30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCommentCell.m; sourceTree = "<group>"; };
+		30DFA8FD17B1BD3D00B729FB /* BuildingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingListViewController.h; sourceTree = "<group>"; };
+		30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildingListViewController.m; sourceTree = "<group>"; };
+		30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuildingListViewController.xib; sourceTree = "<group>"; };
+		30DFA90217B1BD5900B729FB /* MenuListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuListViewController.h; sourceTree = "<group>"; };
+		30DFA90317B1BD5900B729FB /* MenuListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuListViewController.m; sourceTree = "<group>"; };
+		30DFA90417B1BD5900B729FB /* MenuListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuListViewController.xib; sourceTree = "<group>"; };
+		30DFA90717B1BD7C00B729FB /* AccountSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountSetupViewController.h; sourceTree = "<group>"; };
+		30DFA90817B1BD7C00B729FB /* AccountSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountSetupViewController.m; sourceTree = "<group>"; };
+		30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountSetupViewController.xib; sourceTree = "<group>"; };
+		30DFA90C17B1BE4C00B729FB /* AddRatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRatingViewController.h; sourceTree = "<group>"; };
+		30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRatingViewController.m; sourceTree = "<group>"; };
+		30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRatingViewController.xib; sourceTree = "<group>"; };
+		30DFA91117B1BE7800B729FB /* 3-5-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3-5-stars.png"; path = "../../../../../../Desktop/3-5-stars.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,15 +162,30 @@
 				30AA840017A9F2F700B6BCE2 /* Images.xcassets */,
 				30AA83FD17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld */,
 				30AA83F217A9F2F700B6BCE2 /* Supporting Files */,
+				30DFA90717B1BD7C00B729FB /* AccountSetupViewController.h */,
+				30DFA90817B1BD7C00B729FB /* AccountSetupViewController.m */,
+				30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */,
+				30DFA90C17B1BE4C00B729FB /* AddRatingViewController.h */,
+				30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */,
+				30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */,
+				30DFA8FD17B1BD3D00B729FB /* BuildingListViewController.h */,
+				30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */,
+				30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */,
+				30DFA90217B1BD5900B729FB /* MenuListViewController.h */,
+				30DFA90317B1BD5900B729FB /* MenuListViewController.m */,
+				30DFA90417B1BD5900B729FB /* MenuListViewController.xib */,
 				3060205417B18BFC003F4B54 /* MenuViewController.h */,
 				3060205517B18BFC003F4B54 /* MenuViewController.m */,
 				3060205617B18BFC003F4B54 /* MenuViewController.xib */,
 				3060205917B18C3E003F4B54 /* MenuItemViewController.h */,
 				3060205A17B18C3E003F4B54 /* MenuItemViewController.m */,
 				3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */,
+				30DFA8FA17B1BD0700B729FB /* ReviewCommentCell.h */,
+				30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */,
+				301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */,
 				3060205E17B18C77003F4B54 /* MenuItemCell.h */,
 				3060205F17B18C77003F4B54 /* MenuItemCell.m */,
-				3060206117B18C88003F4B54 /* MenuItemCell.xib */,
+				301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */,
 			);
 			path = urls_reviewr;
 			sourceTree = "<group>";
@@ -151,6 +193,7 @@
 		30AA83F217A9F2F700B6BCE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				30DFA91117B1BE7800B729FB /* 3-5-stars.png */,
 				3060206217B19190003F4B54 /* 5stars.png */,
 				30AA83F317A9F2F700B6BCE2 /* urls_reviewr-Info.plist */,
 				30AA83F417A9F2F700B6BCE2 /* InfoPlist.strings */,
@@ -255,8 +298,14 @@
 			files = (
 				30AA83F617A9F2F700B6BCE2 /* InfoPlist.strings in Resources */,
 				3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */,
+				30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */,
+				30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */,
+				30DFA90617B1BD5900B729FB /* MenuListViewController.xib in Resources */,
+				30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */,
 				3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */,
 				30AA840117A9F2F700B6BCE2 /* Images.xcassets in Resources */,
+				301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */,
+				301E648917B1BB5F00FDCC67 /* MenuItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,9 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30DFA90F17B1BE4C00B729FB /* AddRatingViewController.m in Sources */,
+				30DFA90017B1BD3D00B729FB /* BuildingListViewController.m in Sources */,
 				30AA83FF17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld in Sources */,
+				30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */,
+				30DFA90517B1BD5900B729FB /* MenuListViewController.m in Sources */,
 				30AA83FC17A9F2F700B6BCE2 /* AppDelegate.m in Sources */,
 				30AA83F817A9F2F700B6BCE2 /* main.m in Sources */,
+				30DFA90A17B1BD7C00B729FB /* AccountSetupViewController.m in Sources */,
 				3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */,
 				3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */,
 				3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */,
