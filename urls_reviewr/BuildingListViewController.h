@@ -10,4 +10,6 @@
 
 @interface BuildingListViewController : UITableViewController
 
+@property (nonatomic, weak) IBOutlet UITableView *buildingTableView;
+
 @end

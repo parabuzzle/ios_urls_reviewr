@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BuildingListViewController">
             <connections>
+                <outlet property="buildingTableView" destination="4" id="7v9-ex-O5m"/>
                 <outlet property="view" destination="4" id="5"/>
             </connections>
         </placeholder>

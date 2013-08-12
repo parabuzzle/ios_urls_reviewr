@@ -10,6 +10,9 @@
 
 @interface BuildingListViewController ()
 
+@property (nonatomic, strong) NSMutableArray *buildingArray;
+- (void)loadBuildingData;
+
 @end
 
 @implementation BuildingListViewController
@@ -19,6 +22,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = @"Cafeterias";
     }
     return self;
 }
@@ -26,6 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self loadBuildingData];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -44,16 +50,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.buildingArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,8 +69,20 @@
     }
     
     // Configure the cell...
+    cell.textLabel.text = [self.buildingArray objectAtIndex:indexPath.row];
+    cell.shouldIndentWhileEditing = YES;
     
     return cell;
+}
+
+#pragma mark - Private methods
+- (void)loadBuildingData {
+    #warning Potentially incomplete method implementation.
+    //This should load data from backend server
+    
+    //Hardcoded values
+    self.buildingArray = [[NSMutableArray alloc] initWithObjects:@"URLs", @"Building E", @"Building F", @"Building G", nil];
+    
 }
 
 /*
@@ -108,7 +124,7 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -116,14 +132,12 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    // *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
 
     // Pass the selected object to the new view controller.
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    //[self.navigationController pushViewController:detailViewController animated:YES];
 }
- 
- */
 
 @end
