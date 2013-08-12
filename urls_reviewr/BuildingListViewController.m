@@ -7,6 +7,7 @@
 //
 
 #import "BuildingListViewController.h"
+#import "MenuListViewController.h"
 
 @interface BuildingListViewController ()
 
@@ -16,6 +17,8 @@
 @end
 
 @implementation BuildingListViewController
+
+@synthesize menuListViewController;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -76,6 +79,7 @@
 }
 
 #pragma mark - Private methods
+
 - (void)loadBuildingData {
     #warning Potentially incomplete method implementation.
     //This should load data from backend server
@@ -124,7 +128,6 @@
 }
 */
 
-
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -132,12 +135,16 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    // *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+    //if (self.menuListViewController == nil) {
+         self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildingArray objectAtIndex:indexPath.row]];
+    //}
 
     // Pass the selected object to the new view controller.
+    NSLog([NSString stringWithFormat:@"Selected object: %@", [self.buildingArray objectAtIndex:indexPath.row]]);
+    //self.menuListViewController.selectedBuidling = [self.buildingArray objectAtIndex:indexPath.row];
     
     // Push the view controller.
-    //[self.navigationController pushViewController:detailViewController animated:YES];
+    [self.navigationController pushViewController:menuListViewController animated:YES];
 }
 
 @end

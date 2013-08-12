@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuListViewController.h"
 
 @interface BuildingListViewController : UITableViewController
 
+@property (nonatomic, retain) MenuListViewController *menuListViewController;
 @property (nonatomic, weak) IBOutlet UITableView *buildingTableView;
 
 @end

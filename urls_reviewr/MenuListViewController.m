@@ -10,6 +10,10 @@
 
 @interface MenuListViewController ()
 
+@property (nonatomic, strong) NSMutableArray *menuArray;
+
+- (void)loadMenuData;
+
 @end
 
 @implementation MenuListViewController
@@ -19,6 +23,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = @"Menu";
     }
     return self;
 }
@@ -26,12 +31,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.title = self.selectedBuidling;
+    NSLog([NSString stringWithFormat:@"Menu object: %@", self.selectedBuidling]);
+    
+    [self loadMenuData];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (id)initWithName:(NSString *)theName{
+    self = [super initWithNibName:@"MenuListViewController" bundle:nil];
+    if (self) {
+        self.selectedBuidling = [theName copy];
+    }
+    return self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,16 +62,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.menuArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,8 +81,21 @@
     }
     
     // Configure the cell...
+    cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
+    cell.shouldIndentWhileEditing = YES;
     
     return cell;
+}
+
+#pragma mark - Private methods
+
+- (void)loadMenuData{
+    
+    #warning Potentially incomplete method implementation.
+    // Load data from backend use NSString value self.selectedBuilding
+    // to get a custom menu data.
+    self.menuArray = [[NSMutableArray alloc] initWithObjects:@"Item 1", @"Item 2", @"Item 3", nil];
+    
 }
 
 /*

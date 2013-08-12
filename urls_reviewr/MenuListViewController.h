@@ -10,4 +10,8 @@
 
 @interface MenuListViewController : UITableViewController
 
+@property (nonatomic, retain) NSString *selectedBuidling;
+
+- (id)initWithName:(NSString *)theName;
+
 @end
