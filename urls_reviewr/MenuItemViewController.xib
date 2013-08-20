@@ -7,6 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuItemViewController">
             <connections>
+                <outlet property="commentsListView" destination="rgK-Be-Isw" id="IP0-fl-Zas"/>
+                <outlet property="menuItemDescription" destination="CTE-Fj-rfQ" id="bzn-8m-TXd"/>
+                <outlet property="menuItemName" destination="tyS-uk-dNe" id="ft2-h5-ZmD"/>
+                <outlet property="menuItemRating" destination="ncI-BM-OmN" id="5Ic-tU-2jh"/>
+                <outlet property="numberOfComments" destination="eH5-Ne-6NC" id="oiu-zY-SHo"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
