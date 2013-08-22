@@ -40,6 +40,8 @@
 		30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */; };
 		3BAFE1AD17C319280025C584 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1AC17C319280025C584 /* MenuItem.m */; };
 		3BAFE1B517C342220025C584 /* UrlsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B417C342220025C584 /* UrlsClient.m */; };
+		3BAFE1B917C3EBC90025C584 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B817C3EBC90025C584 /* RestObject.m */; };
+		3BAFE1BC17C3ED6E0025C584 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1BB17C3ED6E0025C584 /* Building.m */; };
 		AA305233EB5A4CB9BA233FBB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A22BF362B1754BC6BEC4A9AD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +104,10 @@
 		3BAFE1AC17C319280025C584 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		3BAFE1B317C342220025C584 /* UrlsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlsClient.h; sourceTree = "<group>"; };
 		3BAFE1B417C342220025C584 /* UrlsClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlsClient.m; sourceTree = "<group>"; };
+		3BAFE1B717C3EBC90025C584 /* RestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestObject.h; sourceTree = "<group>"; };
+		3BAFE1B817C3EBC90025C584 /* RestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestObject.m; sourceTree = "<group>"; };
+		3BAFE1BA17C3ED6E0025C584 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
+		3BAFE1BB17C3ED6E0025C584 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 		84F7E0C29B304F06B486C4C8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A22BF362B1754BC6BEC4A9AD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -170,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				3BAFE1B217C3410A0025C584 /* API */,
+				3BAFE1B617C3EB000025C584 /* Models */,
 				30AA83FA17A9F2F700B6BCE2 /* AppDelegate.h */,
 				30AA83FB17A9F2F700B6BCE2 /* AppDelegate.m */,
 				30AA840017A9F2F700B6BCE2 /* Images.xcassets */,
@@ -178,8 +185,6 @@
 				30DFA90717B1BD7C00B729FB /* AccountSetupViewController.h */,
 				30DFA90817B1BD7C00B729FB /* AccountSetupViewController.m */,
 				30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */,
-				3BAFE1AB17C319280025C584 /* MenuItem.h */,
-				3BAFE1AC17C319280025C584 /* MenuItem.m */,
 				30DFA90C17B1BE4C00B729FB /* AddRatingViewController.h */,
 				30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */,
 				30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */,
@@ -243,6 +248,19 @@
 				3BAFE1B417C342220025C584 /* UrlsClient.m */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		3BAFE1B617C3EB000025C584 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BAFE1B717C3EBC90025C584 /* RestObject.h */,
+				3BAFE1B817C3EBC90025C584 /* RestObject.m */,
+				3BAFE1AB17C319280025C584 /* MenuItem.h */,
+				3BAFE1AC17C319280025C584 /* MenuItem.m */,
+				3BAFE1BA17C3ED6E0025C584 /* Building.h */,
+				3BAFE1BB17C3ED6E0025C584 /* Building.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,9 +406,11 @@
 				30AA83FF17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld in Sources */,
 				30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */,
 				30DFA90517B1BD5900B729FB /* MenuListViewController.m in Sources */,
+				3BAFE1BC17C3ED6E0025C584 /* Building.m in Sources */,
 				30AA83FC17A9F2F700B6BCE2 /* AppDelegate.m in Sources */,
 				30AA83F817A9F2F700B6BCE2 /* main.m in Sources */,
 				30DFA90A17B1BD7C00B729FB /* AccountSetupViewController.m in Sources */,
+				3BAFE1B917C3EBC90025C584 /* RestObject.m in Sources */,
 				3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */,
 				3BAFE1AD17C319280025C584 /* MenuItem.m in Sources */,
 				3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */,

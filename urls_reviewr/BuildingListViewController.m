@@ -9,10 +9,11 @@
 #import "BuildingListViewController.h"
 #import "MenuListViewController.h"
 #import "UrlsClient.h"
+#import "Building.h"
 
 @interface BuildingListViewController ()
 
-@property (nonatomic, strong) NSMutableArray *buildingArray;
+@property (nonatomic, strong) NSMutableArray *buildings;
 - (void)loadBuildingData;
 
 @end
@@ -61,7 +62,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return self.buildingArray.count;
+    return self.buildings.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -73,7 +74,7 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = [self.buildingArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.buildings objectAtIndex:indexPath.row];
     cell.shouldIndentWhileEditing = YES;
     
     return cell;
@@ -82,20 +83,35 @@
 #pragma mark - Private methods
 
 - (void)loadBuildingData {
-    #warning Potentially incomplete method implementation.
-    //This should load data from backend server
 
-    [[UrlsClient instance] buildingList:success:^(AFHTTPRequestOperation *operation, id response) {
-            NSLog(@"%@", response);
-            //self.tweets = [Tweet tweetsWithArray:response];
-            [self.tableView reloadData];
-        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-            // Do nothing
-    }];
+    //Load data from backend server
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://fe01.reviewr.mail.gq1.yahoo.net/today.json"]];
     
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
+         [self convertJsonToArray:JSON];
+         [self.tableView reloadData];
+         
+     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+         NSLog(@"Failed ==========\n%@ %@", error, JSON);
+
+     }];
+    [operation start];
+    
+
+    [self.tableView reloadData];
     //Hardcoded values
-    self.buildingArray = [[NSMutableArray alloc] initWithObjects:@"URLs", @"Building E", @"Building F", @"Building G", nil];
+//    self.buildingArray = [[NSMutableArray alloc] initWithObjects:@"URLs", @"Building E", @"Building F", @"Building G", nil];
     
+}
+
+- (void)convertJsonToArray:(NSArray *)JSON{
+    
+    self.buildings = [[NSMutableArray alloc] initWithCapacity:[JSON count]];
+    for (int i=0; i < [JSON count]; i++) {
+        [self.buildings addObject:[[[JSON objectAtIndex:i] allKeys] objectAtIndex:0]];
+    }
+
 }
 
 #pragma mark - Table view delegate
@@ -105,13 +121,10 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    //if (self.menuListViewController == nil) {
-         self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildingArray objectAtIndex:indexPath.row]];
-    //}
+    self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildings objectAtIndex:indexPath.row]];
 
     // Pass the selected object to the new view controller.
-    NSLog([NSString stringWithFormat:@"Selected object: %@", [self.buildingArray objectAtIndex:indexPath.row]]);
-    //self.menuListViewController.selectedBuidling = [self.buildingArray objectAtIndex:indexPath.row];
+    NSLog([NSString stringWithFormat:@"Selected object: %@", [self.buildings objectAtIndex:indexPath.row]]);
     
     // Push the view controller.
     [self.navigationController pushViewController:menuListViewController animated:YES];

@@ -9,13 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "AFHTTPRequestOperation.h"
 #import "AFHTTPClient.h"
+#import "AFJSONRequestOperation.h"
 
 @interface UrlsClient : AFHTTPClient
 
 + (UrlsClient *)instance;
 
-- (void)buildingList:(AFHTTPRequestOperation *)operation
-             success:(void (^)(AFHTTPRequestOperation *operation, id response))successs
+- (void)buildingList:
+             (void (^)(AFHTTPRequestOperation *operation, id response))successs
              failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

@@ -10,4 +10,13 @@
 
 @implementation MenuItem
 
+
++ (NSMutableArray *)menuItemWithArray:(NSArray *)array {
+    NSMutableArray *menuItems = [[NSMutableArray alloc] initWithCapacity:array.count];
+    for (NSDictionary *params in array) {
+        [menuItems addObject:[[MenuItem alloc] initWithDictionary:params]];
+    }
+    return menuItems;
+}
+
 @end
