@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E7AC2A8D-3402-41AC-9E0D-8203C6F31D39</string>
+	<string>E2720338-9082-422C-8336-410ED71FC077</string>
 	<key>IDESourceControlProjectName</key>
 	<string>urls_reviewr</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AB300D51-6F7C-4B2F-B838-2A3B0E706408</key>
+		<key>7BC4AD26-FC7B-466C-9D0D-6143A007B0BA</key>
 		<string>ssh://git.corp.yahoo.com/heijmans/urls_ratings_ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>urls_reviewr.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AB300D51-6F7C-4B2F-B838-2A3B0E706408</key>
+		<key>7BC4AD26-FC7B-466C-9D0D-6143A007B0BA</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AB300D51-6F7C-4B2F-B838-2A3B0E706408</string>
+	<string>7BC4AD26-FC7B-466C-9D0D-6143A007B0BA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AB300D51-6F7C-4B2F-B838-2A3B0E706408</string>
+			<string>7BC4AD26-FC7B-466C-9D0D-6143A007B0BA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>urls_reviewr</string>
 		</dict>
