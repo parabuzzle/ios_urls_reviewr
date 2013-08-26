@@ -14,9 +14,9 @@
 		3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205A17B18C3E003F4B54 /* MenuItemViewController.m */; };
 		3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */; };
 		3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205F17B18C77003F4B54 /* MenuItemCell.m */; };
+		308D9B9717CBF7CB00951708 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83ED17A9F2F700B6BCE2 /* UIKit.framework */; };
 		30AA83EA17A9F2F700B6BCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83E917A9F2F700B6BCE2 /* Foundation.framework */; };
 		30AA83EC17A9F2F700B6BCE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83EB17A9F2F700B6BCE2 /* CoreGraphics.framework */; };
-		30AA83EE17A9F2F700B6BCE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83ED17A9F2F700B6BCE2 /* UIKit.framework */; };
 		30AA83F017A9F2F700B6BCE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83EF17A9F2F700B6BCE2 /* CoreData.framework */; };
 		30AA83F617A9F2F700B6BCE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30AA83F417A9F2F700B6BCE2 /* InfoPlist.strings */; };
 		30AA83F817A9F2F700B6BCE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30AA83F717A9F2F700B6BCE2 /* main.m */; };
@@ -117,9 +117,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308D9B9717CBF7CB00951708 /* UIKit.framework in Frameworks */,
 				30AA83EC17A9F2F700B6BCE2 /* CoreGraphics.framework in Frameworks */,
 				30AA83F017A9F2F700B6BCE2 /* CoreData.framework in Frameworks */,
-				30AA83EE17A9F2F700B6BCE2 /* UIKit.framework in Frameworks */,
 				30AA83EA17A9F2F700B6BCE2 /* Foundation.framework in Frameworks */,
 				AA305233EB5A4CB9BA233FBB /* libPods.a in Frameworks */,
 			);
@@ -312,6 +312,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Yahoo! Inc.";
 				TargetAttributes = {
+					30AA83E517A9F2F700B6BCE2 = {
+						DevelopmentTeam = 2ARNJY38FW;
+					};
 					30AA840517A9F2F700B6BCE2 = {
 						TestTargetID = 30AA83E517A9F2F700B6BCE2;
 					};
@@ -531,11 +534,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "urls_reviewr/urls_reviewr-Prefix.pch";
 				INFOPLIST_FILE = "urls_reviewr/urls_reviewr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -546,11 +556,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "urls_reviewr/urls_reviewr-Prefix.pch";
 				INFOPLIST_FILE = "urls_reviewr/urls_reviewr-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
