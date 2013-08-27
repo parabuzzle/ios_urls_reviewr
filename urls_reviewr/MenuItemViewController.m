@@ -11,8 +11,6 @@
 
 @interface MenuItemViewController ()
 
-- (MenuItem *)loadMenuItemWithName:(NSString *)theName;
-
 @end
 
 @implementation MenuItemViewController
@@ -26,11 +24,9 @@
     return self;
 }
 
-- (id)initWithName:(NSString *)menuItemName{
+- (id)initWithName:(MenuItem *)menuItem{
     self = [super initWithNibName:@"MenuItemViewController" bundle:nil];
-    if (self) {
-        self.selectedMenuItem = [menuItemName copy];
-    }
+    self.menuItem = menuItem;
     return self;
 }
 
@@ -39,8 +35,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = self.selectedMenuItem;
-    NSLog([NSString stringWithFormat:@"Menu object: %@", self.selectedMenuItem]);
+    self.title = self.menuItem.title;
+    NSLog([NSString stringWithFormat:@"Menu object: %@", self.title]);
     
     [self loadMenuItemData];
 
@@ -56,28 +52,13 @@
 
 - (void)loadMenuItemData{
     
-    // Load data from backend use NSString value self.selectedBuilding
-    // to get a custom menu data.
-    MenuItem *menuItem = [self loadMenuItemWithName:@"Menu Item"];
+    #warning Load comments data from backend.
     
-    self.menuItemDescription.text = menuItem.description;
-    self.menuItemName.text = menuItem.name;
-    self.menuItemRating.text = menuItem.ratings;
-    self.numberOfComments.text = menuItem.numberOfComments;
+    self.menuItemDescription.text = self.menuItem.description;
+    self.menuItemName.text = self.menuItem.title;
+    self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.rating];
+    self.numberOfComments.text = [NSString stringWithFormat:@"%d", self.menuItem.reviewers];
     
-}
-
-- (MenuItem *)loadMenuItemWithName:(NSString *)theName{
-    
-    #warning Implement loading of Menu Item from API
-    MenuItem *menuItem = [[MenuItem alloc] init];
-    menuItem.name = @"Menu Item Name";
-    menuItem.description = @"Menu Item Description";
-    menuItem.ratings = @"4/5";
-    menuItem.commentsList = [[NSMutableArray alloc] initWithObjects:@"Comment 1", @"Comment 2", @"Comment 3", nil];
-    menuItem.numberOfComments = [NSString stringWithFormat:@"Menu object: %d", menuItem.commentsList.count];
-    
-    return menuItem;
 }
 
 @end

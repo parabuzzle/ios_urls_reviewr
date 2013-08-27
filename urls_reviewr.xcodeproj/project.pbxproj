@@ -43,6 +43,7 @@
 		3BAFE1B517C342220025C584 /* UrlsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B417C342220025C584 /* UrlsClient.m */; };
 		3BAFE1B917C3EBC90025C584 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B817C3EBC90025C584 /* RestObject.m */; };
 		3BAFE1BC17C3ED6E0025C584 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1BB17C3ED6E0025C584 /* Building.m */; };
+		3BAFE1BF17CC5B930025C584 /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1BE17CC5B930025C584 /* Menu.m */; };
 		AA305233EB5A4CB9BA233FBB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A22BF362B1754BC6BEC4A9AD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,8 @@
 		3BAFE1B817C3EBC90025C584 /* RestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestObject.m; sourceTree = "<group>"; };
 		3BAFE1BA17C3ED6E0025C584 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
 		3BAFE1BB17C3ED6E0025C584 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		3BAFE1BD17CC5B930025C584 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		3BAFE1BE17CC5B930025C584 /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		84F7E0C29B304F06B486C4C8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A22BF362B1754BC6BEC4A9AD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -280,6 +283,8 @@
 				3BAFE1BB17C3ED6E0025C584 /* Building.m */,
 				308D9B9817CBFAE800951708 /* User.h */,
 				308D9B9917CBFAE800951708 /* User.m */,
+				3BAFE1BD17CC5B930025C584 /* Menu.h */,
+				3BAFE1BE17CC5B930025C584 /* Menu.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -432,6 +437,7 @@
 				30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */,
 				30DFA90517B1BD5900B729FB /* MenuListViewController.m in Sources */,
 				3BAFE1BC17C3ED6E0025C584 /* Building.m in Sources */,
+				3BAFE1BF17CC5B930025C584 /* Menu.m in Sources */,
 				30AA83FC17A9F2F700B6BCE2 /* AppDelegate.m in Sources */,
 				30AA83F817A9F2F700B6BCE2 /* main.m in Sources */,
 				30DFA90A17B1BD7C00B729FB /* AccountSetupViewController.m in Sources */,

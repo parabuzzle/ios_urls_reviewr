@@ -25,4 +25,6 @@
 
 - (void)userInfo:(NSString *) userid success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (NSMutableArray *)menuListWithBuilding:(NSString *)building;
+
 @end

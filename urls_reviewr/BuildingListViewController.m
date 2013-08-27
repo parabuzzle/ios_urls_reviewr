@@ -113,12 +113,6 @@
 
      }];
     [operation start];
-    
-
-    [self.tableView reloadData];
-    //Hardcoded values
-//    self.buildingArray = [[NSMutableArray alloc] initWithObjects:@"URLs", @"Building E", @"Building F", @"Building G", nil];
-    
 }
 
 - (void)convertJsonToArray:(NSArray *)JSON{

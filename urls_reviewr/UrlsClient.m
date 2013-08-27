@@ -81,4 +81,11 @@
     [self getPath:[NSString stringWithFormat:@"users/%@.json", userid] parameters:nil success:success failure:failure];
 }
 
+#pragma mark - Menu API
+
+- (void)menuList:(id)response {
+    
+}
+
+
 @end

@@ -8,6 +8,9 @@
 
 #import "MenuListViewController.h"
 #import "MenuItemViewController.h"
+#import "AFJSONRequestOperation.h"
+#import "AFNetworking.h"
+#import "MenuItem.h"
 
 @interface MenuListViewController ()
 
@@ -82,7 +85,7 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [[self.menuArray objectAtIndex:indexPath.row] title];
     cell.shouldIndentWhileEditing = YES;
     
     return cell;
@@ -92,13 +95,64 @@
 
 - (void)loadMenuData{
     
-    #warning Potentially incomplete method implementation.
+    //Load data from backend server
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/today.json"]];
+    
+    AFJSONRequestOperation *operation =
+    [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
+        [self convertMenuJsonToArray:JSON];
+        [self.tableView reloadData];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"Failed ==========\n%@ %@", error, JSON);
+    }];
+    
+    [operation start];
+
+    
+    
     // Load data from backend use NSString value self.selectedBuilding
     // to get a custom menu data.
-    self.menuArray = [[NSMutableArray alloc] initWithObjects:@"Item 1", @"Item 2", @"Item 3", nil];
+    //self.menuArray = [[NSMutableArray alloc] initWithObjects:@"Item 1", @"Item 2", @"Item 3", nil];
     
 }
 
+- (void)convertMenuJsonToArray:(id)JSON{
+    
+    NSDictionary *current;
+    NSDictionary *menu;
+    
+    self.menuArray = [[NSMutableArray alloc] initWithCapacity:[JSON count]];
+    for (int i=0; i < [JSON count]; i++) {
+        current = [JSON objectAtIndex:i];
+        
+        menu = [current objectForKey:self.selectedBuidling];
+        
+        if(menu){
+            //[self.menuArray addObject:[menu objectForKey:@""]];
+            NSLog(@"------------\n\n%@", [menu objectForKey:@"breakfast"]);
+            [self addMealTimeMenu:@"breakfast" withMenu:menu];
+            [self addMealTimeMenu:@"lunch" withMenu:menu];
+            [self addMealTimeMenu:@"dinner" withMenu:menu];
+        }
+        
+    }
+    
+}
+
+- (void)addMealTimeMenu:(NSString *)mealtime withMenu:(NSDictionary *)menuDictionary{
+    
+    NSDictionary *current = [menuDictionary objectForKey:mealtime];
+    NSArray *menus = [current objectForKey:@"menus"];
+    Menu *menu;
+    
+    for(int i=0; i < menus.count; i++){
+        menu = [Menu fromJSON:[menus objectAtIndex:i]];
+        for (int i = 0; i < menu.menuItems.count; i++) {
+            [self.menuArray addObject:[menu.menuItems objectAtIndex:i]];
+        }
+    }
+    
+}
 
 #pragma mark - Table view delegate
 
