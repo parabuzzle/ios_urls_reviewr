@@ -47,11 +47,9 @@
         // Looks like the user didn't enter a username.. throw a dialog!
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Username" message:@"You must enter a username" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
-        NSLog(@"Missing Username");
-        
     } else {
         // Verify the user wants this user
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verify Email" message:[NSString stringWithFormat:@"An email will be sent to %@@yahoo-inc.com with verification information. Is this username correct?", self.username.text] delegate:self cancelButtonTitle:@"No, Let Me Edit" otherButtonTitles:@"Save and Send", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verify Email" message:[NSString stringWithFormat:@"An email will be sent to %@@yahoo-inc.com with verification information. Is this username correct?", self.username.text] delegate:self cancelButtonTitle:@"No, Let Me Edit" otherButtonTitles:@"Yes, Save and Send", nil];
         [alert show];
     }
 }
@@ -61,32 +59,26 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     // When the user dismisses the alert view... save
     if (buttonIndex == 1) {
-        // User has verified their username
-        // Save the user...
+        // User has verified their username, Save the user to the server and locally
         [self onSaveUser];
-        
-        // Dismiss view
-        
     }
-    // User didn't verify.. Do nothing
-    
+    // User chose to edit their username, do nothing
 }
 
 
 #pragma mark - Private Methods
 
-- (void) onSaveUser {
-    // init the user object
-    //User *myUserObj = [[User alloc] initWithUsername:self.username.text];
-    
-    
+- (void) onSaveUser
+{
+    // Initalize User object from successful response and close the modal view... or inform the user something went wrong.
     [[UrlsClient instance] userInit:self.username.text success:^(AFHTTPRequestOperation *operation, id response) {
         User *user = [[User alloc] initWithDictionary:response];
         [user saveLocal];
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        // do nothing for now..
+        // The request was a failure.. :(
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:@"Something went wrong on the server side, please try your request again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     }];
 }
 

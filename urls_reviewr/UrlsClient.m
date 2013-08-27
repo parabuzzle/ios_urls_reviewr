@@ -66,10 +66,19 @@
 
 #pragma mark - User API
 
-- (void)userInit:(NSString *) username success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+- (void)userInit:(NSString *) username success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+    // creates a user
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self postPath:@"users.json" parameters:@{@"username" : username} success:success failure:failure];
     
+}
+
+- (void)userInfo:(NSString *) userid success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+    // Returns user info by userid
+    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self getPath:[NSString stringWithFormat:@"users/%@.json", userid] parameters:nil success:success failure:failure];
 }
 
 @end
