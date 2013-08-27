@@ -15,6 +15,7 @@
 		3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */; };
 		3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205F17B18C77003F4B54 /* MenuItemCell.m */; };
 		308D9B9717CBF7CB00951708 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83ED17A9F2F700B6BCE2 /* UIKit.framework */; };
+		308D9B9A17CBFAE800951708 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 308D9B9917CBFAE800951708 /* User.m */; };
 		30AA83EA17A9F2F700B6BCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83E917A9F2F700B6BCE2 /* Foundation.framework */; };
 		30AA83EC17A9F2F700B6BCE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83EB17A9F2F700B6BCE2 /* CoreGraphics.framework */; };
 		30AA83F017A9F2F700B6BCE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83EF17A9F2F700B6BCE2 /* CoreData.framework */; };
@@ -67,6 +68,8 @@
 		3060205E17B18C77003F4B54 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		3060205F17B18C77003F4B54 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
 		3060206217B19190003F4B54 /* 5stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5stars.png; path = ../../../../../../Desktop/5stars.png; sourceTree = "<group>"; };
+		308D9B9817CBFAE800951708 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		308D9B9917CBFAE800951708 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		30AA83E617A9F2F700B6BCE2 /* urls_reviewr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = urls_reviewr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30AA83E917A9F2F700B6BCE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		30AA83EB17A9F2F700B6BCE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -259,6 +262,8 @@
 				3BAFE1AC17C319280025C584 /* MenuItem.m */,
 				3BAFE1BA17C3ED6E0025C584 /* Building.h */,
 				3BAFE1BB17C3ED6E0025C584 /* Building.m */,
+				308D9B9817CBFAE800951708 /* User.h */,
+				308D9B9917CBFAE800951708 /* User.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308D9B9A17CBFAE800951708 /* User.m in Sources */,
 				30DFA90F17B1BE4C00B729FB /* AddRatingViewController.m in Sources */,
 				30DFA90017B1BD3D00B729FB /* BuildingListViewController.m in Sources */,
 				30AA83FF17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld in Sources */,

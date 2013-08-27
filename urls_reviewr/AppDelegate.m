@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "BuildingListViewController.h"
+#import "AccountSetupViewController.h"
+#import "User.h"
 
 @implementation AppDelegate
 
@@ -21,7 +23,10 @@
     // Override point for customization after application launch.
     BuildingListViewController *buildingViewController = [[BuildingListViewController alloc] init];
  
+    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
+    
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
+    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

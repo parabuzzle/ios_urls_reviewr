@@ -9,7 +9,7 @@
 #import "UrlsClient.h"
 #import "AFNetworking.h"
 
-#define BACKEND_BASE_URL [NSURL URLWithString:@"http://fe01.reviewr.mail.gq1.yahoo.net/"]
+#define BACKEND_BASE_URL [NSURL URLWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/"]
 
 @implementation UrlsClient
 
@@ -23,6 +23,21 @@
     
     return instance;
 }
+
+/*
+- (id)initWithBaseURL:(NSURL *)url {
+    self = [super initWithBaseURL:BACKEND_BASE_URL];
+    if (self != nil) {
+        [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+        
+        //NSData *data = [[NSUserDefaults standardUserDefaults] dataForKey:kAccessTokenKey];
+        //if (data) {
+        //    self.accessToken = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        //}
+    }
+    return self;
+}
+*/
 
 - (UrlsClient *)init {
     
@@ -49,5 +64,12 @@
     
 }
 
+#pragma mark - User API
+
+- (void)userInit:(NSString *) username success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self postPath:@"users.json" parameters:@{@"username" : username} success:success failure:failure];
+    
+}
 
 @end

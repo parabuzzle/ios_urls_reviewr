@@ -10,11 +10,14 @@
 #import "MenuListViewController.h"
 #import "UrlsClient.h"
 #import "Building.h"
+#import "User.h"
+#import "AccountSetupViewController.h"
 
 @interface BuildingListViewController ()
 
 @property (nonatomic, strong) NSMutableArray *buildings;
 - (void)loadBuildingData;
+- (void)accountSetup;
 
 @end
 
@@ -43,7 +46,20 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self performSelector:@selector(accountSetup) withObject:nil afterDelay:1];
 }
+
+
+- (void)accountSetup {
+    User *user = [[User alloc] initLocal];
+    
+    if (user.userid == nil) {
+        AccountSetupViewController *accountView = [[AccountSetupViewController alloc] init];
+        // display accountsetup
+        [self presentViewController:accountView animated:YES completion:NULL];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -85,7 +101,7 @@
 - (void)loadBuildingData {
 
     //Load data from backend server
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://fe01.reviewr.mail.gq1.yahoo.net/today.json"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/today.json"]];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){

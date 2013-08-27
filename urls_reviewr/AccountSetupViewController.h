@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccountSetupViewController : UIViewController
+@interface AccountSetupViewController : UIViewController <UIAlertViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *username;
+
+- (IBAction)onSaveButton:(id)sender;
+
 
 @end
