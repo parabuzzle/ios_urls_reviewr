@@ -85,7 +85,7 @@
     }
     
     // Configure the cell...
-    cell.textLabel.text = [[self.menuArray objectAtIndex:indexPath.row] title];
+    cell.textLabel.text = [[[self.menuArray objectAtIndex:indexPath.row] title] capitalizedString];
     cell.shouldIndentWhileEditing = YES;
     
     return cell;
