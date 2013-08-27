@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AccountSetupViewController : UIViewController <UIAlertViewDelegate>
+@interface AccountSetupViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *username;
 

@@ -31,6 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // register delegates
+    self.username.delegate = self;
+    
     // Give focus to the username field and load the keyboard
     [self.username becomeFirstResponder];
 }
@@ -49,7 +52,7 @@
         [alert show];
     } else {
         // Verify the user wants this user
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verify Email" message:[NSString stringWithFormat:@"An email will be sent to %@@yahoo-inc.com with verification information. Is this username correct?", self.username.text] delegate:self cancelButtonTitle:@"No, Let Me Edit" otherButtonTitles:@"Yes, Save and Send", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verify Email" message:[NSString stringWithFormat:@"An email will be sent to %@@yahoo-inc.com with verification information. Is this username correct?", self.username.text] delegate:self cancelButtonTitle:@"No, Let Me Edit" otherButtonTitles:@"Yes", nil];
         [alert show];
     }
 }
@@ -62,7 +65,15 @@
         // User has verified their username, Save the user to the server and locally
         [self onSaveUser];
     }
-    // User chose to edit their username, do nothing
+    // User chose to edit their username
+}
+
+#pragma mark - UITextFieldDelegate methods
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self onSaveButton:textField];
+    return YES;
 }
 
 
@@ -79,7 +90,9 @@
     }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // The request was a failure.. :(
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:@"Something went wrong on the server side, please try your request again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }];
 }
+
 
 @end
