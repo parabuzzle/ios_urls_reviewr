@@ -85,7 +85,7 @@
 - (void)loadBuildingData {
 
     //Load data from backend server
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://fe01.reviewr.mail.gq1.yahoo.net/today.json"]];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/locations/today.json"]];
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
@@ -97,19 +97,23 @@
 
      }];
     [operation start];
-    
-
-    [self.tableView reloadData];
-    //Hardcoded values
-//    self.buildingArray = [[NSMutableArray alloc] initWithObjects:@"URLs", @"Building E", @"Building F", @"Building G", nil];
-    
 }
 
 - (void)convertJsonToArray:(NSArray *)JSON{
     
+    //NSLog(@"%@", JSON);
+    NSString *current;
+    NSString *previous;
+    
     self.buildings = [[NSMutableArray alloc] initWithCapacity:[JSON count]];
     for (int i=0; i < [JSON count]; i++) {
-        [self.buildings addObject:[[[JSON objectAtIndex:i] allKeys] objectAtIndex:0]];
+        current = [[JSON objectAtIndex:i] objectForKey:@"name"];
+        if(current != previous){
+            [self.buildings addObject:current];
+            previous = current;
+        }
+       
+        
     }
 
 }

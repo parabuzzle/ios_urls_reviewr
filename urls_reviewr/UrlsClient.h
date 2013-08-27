@@ -19,4 +19,6 @@
              (void (^)(AFHTTPRequestOperation *operation, id response))successs
              failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
+- (NSMutableArray *)menuListWithBuilding:(NSString *)building;
+
 @end
