@@ -142,6 +142,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		303E976117CCF4BA00D63688 /* Cell Views */ = {
+			isa = PBXGroup;
+			children = (
+				30DFA8FA17B1BD0700B729FB /* ReviewCommentCell.h */,
+				30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */,
+				301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */,
+				3060205E17B18C77003F4B54 /* MenuItemCell.h */,
+				3060205F17B18C77003F4B54 /* MenuItemCell.m */,
+				301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */,
+			);
+			name = "Cell Views";
+			sourceTree = "<group>";
+		};
+		303E976217CCF4C900D63688 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				30DFA90717B1BD7C00B729FB /* AccountSetupViewController.h */,
+				30DFA90817B1BD7C00B729FB /* AccountSetupViewController.m */,
+				30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */,
+				30DFA90C17B1BE4C00B729FB /* AddRatingViewController.h */,
+				30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */,
+				30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */,
+				30DFA8FD17B1BD3D00B729FB /* BuildingListViewController.h */,
+				30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */,
+				30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */,
+				30DFA90217B1BD5900B729FB /* MenuListViewController.h */,
+				30DFA90317B1BD5900B729FB /* MenuListViewController.m */,
+				30DFA90417B1BD5900B729FB /* MenuListViewController.xib */,
+				3060205417B18BFC003F4B54 /* MenuViewController.h */,
+				3060205517B18BFC003F4B54 /* MenuViewController.m */,
+				3060205617B18BFC003F4B54 /* MenuViewController.xib */,
+				3060205917B18C3E003F4B54 /* MenuItemViewController.h */,
+				3060205A17B18C3E003F4B54 /* MenuItemViewController.m */,
+				3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		30AA83DD17A9F2F700B6BCE2 = {
 			isa = PBXGroup;
 			children = (
@@ -180,35 +218,13 @@
 			children = (
 				3BAFE1B217C3410A0025C584 /* API */,
 				3BAFE1B617C3EB000025C584 /* Models */,
+				303E976217CCF4C900D63688 /* View Controllers */,
+				303E976117CCF4BA00D63688 /* Cell Views */,
 				30AA83FA17A9F2F700B6BCE2 /* AppDelegate.h */,
 				30AA83FB17A9F2F700B6BCE2 /* AppDelegate.m */,
+				30AA83F217A9F2F700B6BCE2 /* Supporting Files */,
 				30AA840017A9F2F700B6BCE2 /* Images.xcassets */,
 				30AA83FD17A9F2F700B6BCE2 /* urls_reviewr.xcdatamodeld */,
-				30AA83F217A9F2F700B6BCE2 /* Supporting Files */,
-				30DFA90717B1BD7C00B729FB /* AccountSetupViewController.h */,
-				30DFA90817B1BD7C00B729FB /* AccountSetupViewController.m */,
-				30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */,
-				30DFA90C17B1BE4C00B729FB /* AddRatingViewController.h */,
-				30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */,
-				30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */,
-				30DFA8FD17B1BD3D00B729FB /* BuildingListViewController.h */,
-				30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */,
-				30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */,
-				30DFA90217B1BD5900B729FB /* MenuListViewController.h */,
-				30DFA90317B1BD5900B729FB /* MenuListViewController.m */,
-				30DFA90417B1BD5900B729FB /* MenuListViewController.xib */,
-				3060205417B18BFC003F4B54 /* MenuViewController.h */,
-				3060205517B18BFC003F4B54 /* MenuViewController.m */,
-				3060205617B18BFC003F4B54 /* MenuViewController.xib */,
-				3060205917B18C3E003F4B54 /* MenuItemViewController.h */,
-				3060205A17B18C3E003F4B54 /* MenuItemViewController.m */,
-				3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */,
-				30DFA8FA17B1BD0700B729FB /* ReviewCommentCell.h */,
-				30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */,
-				301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */,
-				3060205E17B18C77003F4B54 /* MenuItemCell.h */,
-				3060205F17B18C77003F4B54 /* MenuItemCell.m */,
-				301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */,
 			);
 			path = urls_reviewr;
 			sourceTree = "<group>";
