@@ -23,7 +23,7 @@
     
     MenuItem *menuItem = [[MenuItem alloc] init];
     
-    menuItem.id = [[JsonDictionary objectForKey:@"id"] integerValue];
+    menuItem.menuItemId = [[JsonDictionary objectForKey:@"id"] integerValue];
     menuItem.menuId = [[JsonDictionary objectForKey:@"menu_id"] integerValue];
     menuItem.title = [JsonDictionary objectForKey:@"title"];
     menuItem.description = [JsonDictionary objectForKey:@"description"];

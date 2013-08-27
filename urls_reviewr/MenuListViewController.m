@@ -107,12 +107,6 @@
     }];
     
     [operation start];
-
-    
-    
-    // Load data from backend use NSString value self.selectedBuilding
-    // to get a custom menu data.
-    //self.menuArray = [[NSMutableArray alloc] initWithObjects:@"Item 1", @"Item 2", @"Item 3", nil];
     
 }
 

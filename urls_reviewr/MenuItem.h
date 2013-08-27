@@ -12,7 +12,7 @@
 
 @interface MenuItem : RestObject
 
-@property (nonatomic) NSInteger id;
+@property (nonatomic) NSInteger menuItemId;
 @property (nonatomic) NSInteger menuId;
 @property (nonatomic, strong) NSString *description;
 @property (nonatomic, strong) NSString *title;
