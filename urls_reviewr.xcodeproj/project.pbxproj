@@ -39,6 +39,7 @@
 		30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90917B1BD7C00B729FB /* AccountSetupViewController.xib */; };
 		30DFA90F17B1BE4C00B729FB /* AddRatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */; };
 		30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */; };
+		3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */; };
 		3BAFE1AD17C319280025C584 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1AC17C319280025C584 /* MenuItem.m */; };
 		3BAFE1B517C342220025C584 /* UrlsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B417C342220025C584 /* UrlsClient.m */; };
 		3BAFE1B917C3EBC90025C584 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B817C3EBC90025C584 /* RestObject.m */; };
@@ -104,6 +105,7 @@
 		30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRatingViewController.m; sourceTree = "<group>"; };
 		30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRatingViewController.xib; sourceTree = "<group>"; };
 		30DFA91117B1BE7800B729FB /* 3-5-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3-5-stars.png"; path = "../../../../../../Desktop/3-5-stars.png"; sourceTree = "<group>"; };
+		3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "url-s-yahoo-main-cafeteria.jpg"; path = "Images.xcassets/url-s-yahoo-main-cafeteria.jpg"; sourceTree = "<group>"; };
 		3BAFE1AB17C319280025C584 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		3BAFE1AC17C319280025C584 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		3BAFE1B317C342220025C584 /* UrlsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlsClient.h; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 		30AA83F217A9F2F700B6BCE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */,
 				30DFA91117B1BE7800B729FB /* 3-5-stars.png */,
 				3060206217B19190003F4B54 /* 5stars.png */,
 				30AA83F317A9F2F700B6BCE2 /* urls_reviewr-Info.plist */,
@@ -375,6 +378,7 @@
 				30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */,
 				30DFA90617B1BD5900B729FB /* MenuListViewController.xib in Resources */,
 				30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */,
+				3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */,
 				3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */,
 				30AA840117A9F2F700B6BCE2 /* Images.xcassets in Resources */,
 				301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */,

@@ -35,7 +35,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = self.menuItem.title;
+    self.title = [self.menuItem.title capitalizedString];
+    self.menuItemDescription.numberOfLines = 0;
+    [self.menuItemDescription sizeToFit];
+    
+    
     NSLog([NSString stringWithFormat:@"Menu object: %@", self.title]);
     
     [self loadMenuItemData];
@@ -57,7 +61,7 @@
     self.menuItemDescription.text = self.menuItem.description;
     self.menuItemName.text = self.menuItem.title;
     self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.rating];
-    self.numberOfComments.text = [NSString stringWithFormat:@"%d", self.menuItem.reviewers];
+    self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
     
 }
 

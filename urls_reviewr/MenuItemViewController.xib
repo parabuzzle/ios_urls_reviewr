@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="with orange buerre blanc, black-eyed peas, and Field to Fork Farms collard Greens smoked bacon" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="186" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-Fj-rfQ">
-                    <rect key="frame" x="114" y="37" width="186" height="65"/>
+                    <rect key="frame" x="114" y="53" width="186" height="143"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                     <nil key="highlightedColor"/>

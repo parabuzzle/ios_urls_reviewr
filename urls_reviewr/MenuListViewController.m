@@ -11,6 +11,7 @@
 #import "AFJSONRequestOperation.h"
 #import "AFNetworking.h"
 #import "MenuItem.h"
+#import "UrlsClient.h"
 
 @interface MenuListViewController ()
 
@@ -41,6 +42,9 @@
     
     [self loadMenuData];
 
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.tableView.backgroundView = [UIImageView alloc];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -85,7 +89,9 @@
     }
     
     // Configure the cell...
+    cell.textLabel.numberOfLines = 0;
     cell.textLabel.text = [[[self.menuArray objectAtIndex:indexPath.row] title] capitalizedString];
+    [cell sizeToFit];
     cell.shouldIndentWhileEditing = YES;
     
     return cell;
@@ -96,17 +102,15 @@
 - (void)loadMenuData{
     
     //Load data from backend server
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/today.json"]];
+    [[UrlsClient instance] todaysMenu:^(AFHTTPRequestOperation *operation, id response) {
     
-    AFJSONRequestOperation *operation =
-    [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
-        [self convertMenuJsonToArray:JSON];
+        NSLog(@"%@", response);
+        [self convertMenuJsonToArray:response];
         [self.tableView reloadData];
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"Failed ==========\n%@ %@", error, JSON);
-    }];
     
-    [operation start];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failed ==========\n%@", error);
+    }];
     
 }
 
@@ -122,8 +126,6 @@
         menu = [current objectForKey:self.selectedBuidling];
         
         if(menu){
-            //[self.menuArray addObject:[menu objectForKey:@""]];
-            NSLog(@"------------\n\n%@", [menu objectForKey:@"breakfast"]);
             [self addMealTimeMenu:@"breakfast" withMenu:menu];
             [self addMealTimeMenu:@"lunch" withMenu:menu];
             [self addMealTimeMenu:@"dinner" withMenu:menu];

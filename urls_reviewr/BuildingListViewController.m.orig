@@ -41,16 +41,6 @@
     
     [self loadBuildingData];
 
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"url-s-yahoo-main-cafeteria.jpg"]];
-    //self.tableView.backgroundView.backgroundColor = [UIColor greenColor];
-    //self.tableView.backgroundColor = [UIColor clearColor];
-    //self.tableView.backgroundView = backgroundView;
-    backgroundView.alpha = 0.25;
-    //[[[UIApplication sharedApplication] keyWindow] addSubview:backgroundView];
-    [self.view insertSubview:backgroundView belowSubview:self.view];
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -102,7 +92,6 @@
     // Configure the cell...
     cell.textLabel.text = [self.buildings objectAtIndex:indexPath.row];
     cell.shouldIndentWhileEditing = YES;
-    cell.backgroundColor = [UIColor clearColor];
     
     return cell;
 }
@@ -112,19 +101,39 @@
 - (void)loadBuildingData {
 
     //Load data from backend server
-    [[UrlsClient instance] buildingList:^(AFHTTPRequestOperation *operation, id response) {
-        [self convertJsonToArray:response];
-        [self.tableView reloadData];
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Failed ==========\n%@", error);
-    }];
+<<<<<<< HEAD
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/today.json"]];
+=======
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[[NSURL alloc]initWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/locations/today.json"]];
+>>>>>>> dev_api_calls
+    
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
+                                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON){
+         [self convertJsonToArray:JSON];
+         [self.tableView reloadData];
+         
+     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+         NSLog(@"Failed ==========\n%@ %@", error, JSON);
+
+     }];
+    [operation start];
 }
 
 - (void)convertJsonToArray:(NSArray *)JSON{
     
+    //NSLog(@"%@", JSON);
+    NSString *current;
+    NSString *previous;
+    
     self.buildings = [[NSMutableArray alloc] initWithCapacity:[JSON count]];
     for (int i=0; i < [JSON count]; i++) {
-        [self.buildings addObject:[[[JSON objectAtIndex:i] allKeys] objectAtIndex:0]];
+        current = [[JSON objectAtIndex:i] objectForKey:@"name"];
+        if(current != previous){
+            [self.buildings addObject:current];
+            previous = current;
+        }
+       
+        
     }
 
 }
