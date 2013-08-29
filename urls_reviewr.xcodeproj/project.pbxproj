@@ -87,6 +87,8 @@
 		3067B58817CFC2B5004AECFD /* appicon2-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon2-120.png"; sourceTree = "<group>"; };
 		3067B58917CFC2B5004AECFD /* appicon2-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon2-114.png"; sourceTree = "<group>"; };
 		3067B59017CFC323004AECFD /* appicon2-120-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon2-120-2.png"; sourceTree = "<group>"; };
+		3067B59317CFE848004AECFD /* splash-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-iphone4.png"; sourceTree = "<group>"; };
+		3067B59417CFE848004AECFD /* splash-iphone5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-iphone5.png"; sourceTree = "<group>"; };
 		308D9B9817CBFAE800951708 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		308D9B9917CBFAE800951708 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		30AA83E617A9F2F700B6BCE2 /* Cafes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +207,16 @@
 		3067B57F17CFBDFD004AECFD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3067B59217CFC6C7004AECFD /* App Icons */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		3067B59217CFC6C7004AECFD /* App Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3067B59317CFE848004AECFD /* splash-iphone4.png */,
+				3067B59417CFE848004AECFD /* splash-iphone5.png */,
 				3067B59017CFC323004AECFD /* appicon2-120-2.png */,
 				3067B58417CFC2B5004AECFD /* appicon2-29.png */,
 				3067B58517CFC2B5004AECFD /* appicon2-57.png */,
@@ -215,7 +227,7 @@
 				3067B58017CFBDFD004AECFD /* appicon-114.png */,
 				3067B58117CFBDFD004AECFD /* appicon-57.png */,
 			);
-			path = images;
+			name = "App Icons";
 			sourceTree = "<group>";
 		};
 		30AA83DD17A9F2F700B6BCE2 = {
