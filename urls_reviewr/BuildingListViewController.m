@@ -31,6 +31,10 @@
     if (self) {
         // Custom initialization
         self.title = @"Cafeterias";
+        
+        [self loadBuildingData];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
     }
     return self;
 }
@@ -39,8 +43,6 @@
 {
     [super viewDidLoad];
     
-    [self loadBuildingData];
-
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"url-s-yahoo-main-cafeteria.jpg"]];
