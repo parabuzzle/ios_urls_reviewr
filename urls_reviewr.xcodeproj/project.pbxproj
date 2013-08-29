@@ -15,6 +15,14 @@
 		3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */; };
 		3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205F17B18C77003F4B54 /* MenuItemCell.m */; };
 		3065242517CFF736001D9D7D /* splash-iphone4-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242417CFF736001D9D7D /* splash-iphone4-small.png */; };
+		3065242D17D00839001D9D7D /* bldg-e-clear-tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242717D00839001D9D7D /* bldg-e-clear-tall.png */; };
+		3065242E17D00839001D9D7D /* bldg-f-clear-tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242817D00839001D9D7D /* bldg-f-clear-tall.png */; };
+		3065242F17D00839001D9D7D /* bldg-g-clear-tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242917D00839001D9D7D /* bldg-g-clear-tall.png */; };
+		3065243017D00839001D9D7D /* bldg-urls-clear-tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242A17D00839001D9D7D /* bldg-urls-clear-tall.png */; };
+		3065243117D00839001D9D7D /* peppers-clear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242B17D00839001D9D7D /* peppers-clear.png */; };
+		3065243217D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3065242C17D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg */; };
+		3065243417D0146A001D9D7D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3065243317D0146A001D9D7D /* SystemConfiguration.framework */; };
+		3065243617D014A9001D9D7D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3065243517D014A9001D9D7D /* MobileCoreServices.framework */; };
 		3067B58217CFBDFD004AECFD /* appicon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3067B58017CFBDFD004AECFD /* appicon-114.png */; };
 		3067B58317CFBDFD004AECFD /* appicon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3067B58117CFBDFD004AECFD /* appicon-57.png */; };
 		3067B58A17CFC2B5004AECFD /* appicon2-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 3067B58417CFC2B5004AECFD /* appicon2-29.png */; };
@@ -80,6 +88,14 @@
 		3060205F17B18C77003F4B54 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
 		3060206217B19190003F4B54 /* 5stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5stars.png; path = ../../../../../../Desktop/5stars.png; sourceTree = "<group>"; };
 		3065242417CFF736001D9D7D /* splash-iphone4-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-iphone4-small.png"; sourceTree = "<group>"; };
+		3065242717D00839001D9D7D /* bldg-e-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-e-clear-tall.png"; sourceTree = "<group>"; };
+		3065242817D00839001D9D7D /* bldg-f-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-f-clear-tall.png"; sourceTree = "<group>"; };
+		3065242917D00839001D9D7D /* bldg-g-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-g-clear-tall.png"; sourceTree = "<group>"; };
+		3065242A17D00839001D9D7D /* bldg-urls-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-urls-clear-tall.png"; sourceTree = "<group>"; };
+		3065242B17D00839001D9D7D /* peppers-clear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "peppers-clear.png"; sourceTree = "<group>"; };
+		3065242C17D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "url-s-yahoo-main-cafeteria.jpg"; sourceTree = "<group>"; };
+		3065243317D0146A001D9D7D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3065243517D014A9001D9D7D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3067B58017CFBDFD004AECFD /* appicon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-114.png"; sourceTree = "<group>"; };
 		3067B58117CFBDFD004AECFD /* appicon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-57.png"; sourceTree = "<group>"; };
 		3067B58417CFC2B5004AECFD /* appicon2-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon2-29.png"; sourceTree = "<group>"; };
@@ -146,6 +162,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3065243617D014A9001D9D7D /* MobileCoreServices.framework in Frameworks */,
+				3065243417D0146A001D9D7D /* SystemConfiguration.framework in Frameworks */,
 				308D9B9717CBF7CB00951708 /* UIKit.framework in Frameworks */,
 				30AA83EC17A9F2F700B6BCE2 /* CoreGraphics.framework in Frameworks */,
 				30AA83F017A9F2F700B6BCE2 /* CoreData.framework in Frameworks */,
@@ -206,9 +224,23 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		3065242617D00839001D9D7D /* Background Images */ = {
+			isa = PBXGroup;
+			children = (
+				3065242717D00839001D9D7D /* bldg-e-clear-tall.png */,
+				3065242817D00839001D9D7D /* bldg-f-clear-tall.png */,
+				3065242917D00839001D9D7D /* bldg-g-clear-tall.png */,
+				3065242A17D00839001D9D7D /* bldg-urls-clear-tall.png */,
+				3065242B17D00839001D9D7D /* peppers-clear.png */,
+				3065242C17D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg */,
+			);
+			path = "Background Images";
+			sourceTree = "<group>";
+		};
 		3067B57F17CFBDFD004AECFD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				3065242617D00839001D9D7D /* Background Images */,
 				3067B59217CFC6C7004AECFD /* App Icons */,
 			);
 			path = images;
@@ -257,6 +289,8 @@
 		30AA83E817A9F2F700B6BCE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3065243517D014A9001D9D7D /* MobileCoreServices.framework */,
+				3065243317D0146A001D9D7D /* SystemConfiguration.framework */,
 				30AA83E917A9F2F700B6BCE2 /* Foundation.framework */,
 				30AA83EB17A9F2F700B6BCE2 /* CoreGraphics.framework */,
 				30AA83ED17A9F2F700B6BCE2 /* UIKit.framework */,
@@ -425,6 +459,7 @@
 				3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */,
 				3067B58317CFBDFD004AECFD /* appicon-57.png in Resources */,
 				30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */,
+				3065243117D00839001D9D7D /* peppers-clear.png in Resources */,
 				3067B58A17CFC2B5004AECFD /* appicon2-29.png in Resources */,
 				3067B58217CFBDFD004AECFD /* appicon-114.png in Resources */,
 				3067B58D17CFC2B5004AECFD /* appicon2-80.png in Resources */,
@@ -434,10 +469,15 @@
 				3067B58C17CFC2B5004AECFD /* appicon2-58.png in Resources */,
 				30DFA90617B1BD5900B729FB /* MenuListViewController.xib in Resources */,
 				3065242517CFF736001D9D7D /* splash-iphone4-small.png in Resources */,
+				3065243217D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg in Resources */,
+				3065243017D00839001D9D7D /* bldg-urls-clear-tall.png in Resources */,
 				30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */,
 				3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */,
+				3065242F17D00839001D9D7D /* bldg-g-clear-tall.png in Resources */,
 				3067B58E17CFC2B5004AECFD /* appicon2-120.png in Resources */,
+				3065242D17D00839001D9D7D /* bldg-e-clear-tall.png in Resources */,
 				3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */,
+				3065242E17D00839001D9D7D /* bldg-f-clear-tall.png in Resources */,
 				30AA840117A9F2F700B6BCE2 /* Images.xcassets in Resources */,
 				301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */,
 				301E648917B1BB5F00FDCC67 /* MenuItemCell.xib in Resources */,

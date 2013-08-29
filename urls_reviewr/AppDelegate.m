@@ -23,9 +23,10 @@
     // Override point for customization after application launch.
     BuildingListViewController *buildingViewController = [[BuildingListViewController alloc] init];
  
-    //self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
+    nvc.navigationBar.translucent = YES;
     
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
+    self.window.rootViewController = nvc;
     
     
     self.window.backgroundColor = [UIColor whiteColor];

@@ -32,7 +32,7 @@
         // Custom initialization
         self.title = @"Cafeterias";
         
-        [self loadBuildingData];
+        //[self loadBuildingData];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
     }
@@ -45,7 +45,7 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"url-s-yahoo-main-cafeteria.jpg"]];
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"peppers-clear.png"]];
     //self.tableView.backgroundView.backgroundColor = [UIColor greenColor];
     //self.tableView.backgroundColor = [UIColor clearColor];
     //self.tableView.backgroundView = backgroundView;

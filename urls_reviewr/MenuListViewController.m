@@ -38,7 +38,7 @@
     [super viewDidLoad];
     
     self.title = self.selectedBuidling;
-    NSLog([NSString stringWithFormat:@"Menu object: %@", self.selectedBuidling]);
+    //NSLog([NSString stringWithFormat:@"Menu object: %@", self.selectedBuidling]);
     
     [self loadMenuData];
 
@@ -56,6 +56,32 @@
     self = [super initWithNibName:@"MenuListViewController" bundle:nil];
     if (self) {
         self.selectedBuidling = [theName copy];
+        NSString *image_name = @"peppers-clear.png";
+        
+        //NSLog(self.selectedBuidling);
+        if ([self.selectedBuidling isEqual: @"Url's Cafe"]) {
+            image_name = @"bldg-urls-clear-tall.png";
+        } else if ([self.selectedBuidling isEqual: @"Bldg E"]){
+            image_name = @"bldg-e-clear-tall.png";
+        } else if ([self.selectedBuidling isEqual: @"Bldg F"]){
+            image_name = @"bldg-f-clear-tall.png";
+        } else if ([self.selectedBuidling isEqual:@"Bldg G"]) {
+            image_name = @"bldg-g-clear-tall.png";
+        }
+
+        //self.view.autoresizesSubviews = NO;
+        
+        UIImage *backgroundImage = [UIImage imageNamed:image_name];
+        UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+        
+    
+        //[backgroundView setFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+        //[backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin];
+        //UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image_name]];
+        backgroundView.alpha = 0.35;
+        //[[[UIApplication sharedApplication] keyWindow] addSubview:backgroundView];
+        [self.view insertSubview:backgroundView belowSubview:self.view];
+
     }
     return self;
 }
@@ -71,6 +97,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
+#warning The Sections should indicate meal time.. so we have a nice section for each mealtime..
     return 1;
 }
 
