@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>F675890C-0671-46EE-B8DD-631D5EFCDC59</string>
+	<string>395B162D-97E3-46C8-BA69-6A0D8330E726</string>
 	<key>IDESourceControlProjectName</key>
 	<string>urls_reviewr</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1EF3DECD-566F-4F1B-AA81-D09A9F39B300</key>
-		<string>ssh://git.corp.yahoo.com/heijmans/urls_ratings_ios.git</string>
+		<key>C19BEB67-0902-4439-BF6C-372B1AFE4D13</key>
+		<string>ssh://github.com/parabuzzle/ios_urls_reviewr.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>urls_reviewr.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1EF3DECD-566F-4F1B-AA81-D09A9F39B300</key>
+		<key>C19BEB67-0902-4439-BF6C-372B1AFE4D13</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://git.corp.yahoo.com/heijmans/urls_ratings_ios.git</string>
+	<string>ssh://github.com/parabuzzle/ios_urls_reviewr.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1EF3DECD-566F-4F1B-AA81-D09A9F39B300</string>
+	<string>C19BEB67-0902-4439-BF6C-372B1AFE4D13</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1EF3DECD-566F-4F1B-AA81-D09A9F39B300</string>
+			<string>C19BEB67-0902-4439-BF6C-372B1AFE4D13</string>
 			<key>IDESourceControlWCCName</key>
-			<string>urls_reviewr</string>
+			<string>ios_urls_reviewr</string>
 		</dict>
 	</array>
 </dict>

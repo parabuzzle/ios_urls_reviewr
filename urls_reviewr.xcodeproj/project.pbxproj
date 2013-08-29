@@ -14,6 +14,7 @@
 		3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205A17B18C3E003F4B54 /* MenuItemViewController.m */; };
 		3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */; };
 		3060206017B18C77003F4B54 /* MenuItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205F17B18C77003F4B54 /* MenuItemCell.m */; };
+		3065242517CFF736001D9D7D /* splash-iphone4-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3065242417CFF736001D9D7D /* splash-iphone4-small.png */; };
 		3067B58217CFBDFD004AECFD /* appicon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 3067B58017CFBDFD004AECFD /* appicon-114.png */; };
 		3067B58317CFBDFD004AECFD /* appicon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3067B58117CFBDFD004AECFD /* appicon-57.png */; };
 		3067B58A17CFC2B5004AECFD /* appicon2-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 3067B58417CFC2B5004AECFD /* appicon2-29.png */; };
@@ -78,6 +79,7 @@
 		3060205E17B18C77003F4B54 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		3060205F17B18C77003F4B54 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
 		3060206217B19190003F4B54 /* 5stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5stars.png; path = ../../../../../../Desktop/5stars.png; sourceTree = "<group>"; };
+		3065242417CFF736001D9D7D /* splash-iphone4-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash-iphone4-small.png"; sourceTree = "<group>"; };
 		3067B58017CFBDFD004AECFD /* appicon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-114.png"; sourceTree = "<group>"; };
 		3067B58117CFBDFD004AECFD /* appicon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon-57.png"; sourceTree = "<group>"; };
 		3067B58417CFC2B5004AECFD /* appicon2-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appicon2-29.png"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 		3067B59217CFC6C7004AECFD /* App Icons */ = {
 			isa = PBXGroup;
 			children = (
+				3065242417CFF736001D9D7D /* splash-iphone4-small.png */,
 				3067B59317CFE848004AECFD /* splash-iphone4.png */,
 				3067B59417CFE848004AECFD /* splash-iphone5.png */,
 				3067B59017CFC323004AECFD /* appicon2-120-2.png */,
@@ -430,6 +433,7 @@
 				3067B58B17CFC2B5004AECFD /* appicon2-57.png in Resources */,
 				3067B58C17CFC2B5004AECFD /* appicon2-58.png in Resources */,
 				30DFA90617B1BD5900B729FB /* MenuListViewController.xib in Resources */,
+				3065242517CFF736001D9D7D /* splash-iphone4-small.png in Resources */,
 				30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */,
 				3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */,
 				3067B58E17CFC2B5004AECFD /* appicon2-120.png in Resources */,
