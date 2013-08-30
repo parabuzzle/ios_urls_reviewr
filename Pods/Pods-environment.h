@@ -25,3 +25,9 @@
 // Please contact the author.
 // Version: 1.5pre.
 
+// MMProgressHUD
+#define COCOAPODS_POD_AVAILABLE_MMProgressHUD
+#define COCOAPODS_VERSION_MAJOR_MMProgressHUD 0
+#define COCOAPODS_VERSION_MINOR_MMProgressHUD 1
+#define COCOAPODS_VERSION_PATCH_MMProgressHUD 0
+

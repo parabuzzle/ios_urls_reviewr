@@ -24,6 +24,11 @@
     BuildingListViewController *buildingViewController = [[BuildingListViewController alloc] init];
  
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
+    
+    //AccountSetupViewController *removeMe = [[AccountSetupViewController alloc] init];
+    //UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:removeMe];
+    
+    
     nvc.navigationBar.translucent = YES;
     
     self.window.rootViewController = nvc;
