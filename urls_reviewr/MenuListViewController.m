@@ -56,9 +56,9 @@
     self = [super initWithNibName:@"MenuListViewController" bundle:nil];
     if (self) {
         self.selectedBuidling = [theName copy];
-        NSString *image_name = @"peppers-clear.png";
         
-        //NSLog(self.selectedBuidling);
+        // Custom Background for Each Building
+        NSString *image_name = @"peppers-clear.png";
         if ([self.selectedBuidling isEqual: @"Url's Cafe"]) {
             image_name = @"bldg-urls-clear-tall.png";
         } else if ([self.selectedBuidling isEqual: @"Bldg E"]){
@@ -67,21 +67,15 @@
             image_name = @"bldg-f-clear-tall.png";
         } else if ([self.selectedBuidling isEqual:@"Bldg G"]) {
             image_name = @"bldg-g-clear-tall.png";
+        } else if ([self.selectedBuidling isEqual: @"Boardwalk Cafe"]){
+            // Where the hell is Boardwalk Cafe?!
+            image_name = @"peppers-clear.png";
         }
-
-        //self.view.autoresizesSubviews = NO;
-        
         UIImage *backgroundImage = [UIImage imageNamed:image_name];
         UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-        
-    
-        //[backgroundView setFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
-        //[backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin];
-        //UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image_name]];
-        backgroundView.alpha = 0.35;
-        //[[[UIApplication sharedApplication] keyWindow] addSubview:backgroundView];
-        [self.view insertSubview:backgroundView belowSubview:self.view];
-
+        [backgroundView setFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+        [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin];
+        self.tableView.backgroundView = backgroundView;
     }
     return self;
 }
@@ -119,8 +113,13 @@
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.text = [[[self.menuArray objectAtIndex:indexPath.row] title] capitalizedString];
     [cell sizeToFit];
+    cell.backgroundColor = [UIColor clearColor];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
     cell.shouldIndentWhileEditing = YES;
-    
+    UIView *selectedBackgroundViewForCell = [UIView new];
+    [selectedBackgroundViewForCell setBackgroundColor:[UIColor purpleColor]];
+    cell.selectedBackgroundView = selectedBackgroundViewForCell;
     return cell;
 }
 

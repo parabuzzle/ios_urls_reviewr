@@ -35,6 +35,13 @@
         //[self loadBuildingData];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
+        // Custom Background for Each Building
+        NSString *image_name = @"peppers-clear.png";
+        UIImage *backgroundImage = [UIImage imageNamed:image_name];
+        UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+        [backgroundView setFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
+        [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin];
+        self.tableView.backgroundView = backgroundView;
     }
     return self;
 }
@@ -44,14 +51,6 @@
     [super viewDidLoad];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"peppers-clear.png"]];
-    //self.tableView.backgroundView.backgroundColor = [UIColor greenColor];
-    //self.tableView.backgroundColor = [UIColor clearColor];
-    //self.tableView.backgroundView = backgroundView;
-    backgroundView.alpha = 0.25;
-    //[[[UIApplication sharedApplication] keyWindow] addSubview:backgroundView];
-    [self.view insertSubview:backgroundView belowSubview:self.view];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -105,7 +104,11 @@
     cell.textLabel.text = [self.buildings objectAtIndex:indexPath.row];
     cell.shouldIndentWhileEditing = YES;
     cell.backgroundColor = [UIColor clearColor];
-    
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
+    UIView *selectedBackgroundViewForCell = [UIView new];
+    [selectedBackgroundViewForCell setBackgroundColor:[UIColor purpleColor]];
+    cell.selectedBackgroundView = selectedBackgroundViewForCell;
     return cell;
 }
 
