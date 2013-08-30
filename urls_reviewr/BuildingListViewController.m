@@ -36,11 +36,14 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
         // Custom Background for Each Building
-        NSString *image_name = @"peppers-clear.png";
+        
+        NSLog(@"%f", self.view.frame.size.height);
+        NSString *image_name = @"background-main.png";
+        if (self.view.frame.size.height < 568) {
+            image_name = @"background-main-iphone4.png";
+        }
         UIImage *backgroundImage = [UIImage imageNamed:image_name];
         UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-        [backgroundView setFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
-        [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin];
         self.tableView.backgroundView = backgroundView;
     }
     return self;

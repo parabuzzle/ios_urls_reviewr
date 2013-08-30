@@ -57,6 +57,8 @@
 		30DFA90F17B1BE4C00B729FB /* AddRatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */; };
 		30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */; };
 		30FBDAE517D0E60100872628 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FBDAE417D0E60100872628 /* Security.framework */; };
+		30FBDAE717D0EE4100872628 /* background-main.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FBDAE617D0EE4100872628 /* background-main.png */; };
+		30FBDAE917D0F0D300872628 /* background-main-iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FBDAE817D0F0D300872628 /* background-main-iphone4.png */; };
 		3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */; };
 		3BAFE1AD17C319280025C584 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1AC17C319280025C584 /* MenuItem.m */; };
 		3BAFE1B517C342220025C584 /* UrlsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B417C342220025C584 /* UrlsClient.m */; };
@@ -144,6 +146,8 @@
 		30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRatingViewController.xib; sourceTree = "<group>"; };
 		30DFA91117B1BE7800B729FB /* 3-5-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3-5-stars.png"; path = "../../../../../../Desktop/3-5-stars.png"; sourceTree = "<group>"; };
 		30FBDAE417D0E60100872628 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		30FBDAE617D0EE4100872628 /* background-main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main.png"; sourceTree = "<group>"; };
+		30FBDAE817D0F0D300872628 /* background-main-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main-iphone4.png"; sourceTree = "<group>"; };
 		3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "url-s-yahoo-main-cafeteria.jpg"; path = "Images.xcassets/url-s-yahoo-main-cafeteria.jpg"; sourceTree = "<group>"; };
 		3BAFE1AB17C319280025C584 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		3BAFE1AC17C319280025C584 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 		3065242617D00839001D9D7D /* Background Images */ = {
 			isa = PBXGroup;
 			children = (
+				30FBDAE817D0F0D300872628 /* background-main-iphone4.png */,
+				30FBDAE617D0EE4100872628 /* background-main.png */,
 				3065242717D00839001D9D7D /* bldg-e-clear-tall.png */,
 				3065242817D00839001D9D7D /* bldg-f-clear-tall.png */,
 				3065242917D00839001D9D7D /* bldg-g-clear-tall.png */,
@@ -467,6 +473,8 @@
 				3067B58A17CFC2B5004AECFD /* appicon2-29.png in Resources */,
 				3067B58217CFBDFD004AECFD /* appicon-114.png in Resources */,
 				3067B58D17CFC2B5004AECFD /* appicon2-80.png in Resources */,
+				30FBDAE917D0F0D300872628 /* background-main-iphone4.png in Resources */,
+				30FBDAE717D0EE4100872628 /* background-main.png in Resources */,
 				3067B58F17CFC2B5004AECFD /* appicon2-114.png in Resources */,
 				30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */,
 				3067B58B17CFC2B5004AECFD /* appicon2-57.png in Resources */,
