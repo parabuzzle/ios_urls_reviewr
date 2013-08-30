@@ -113,7 +113,8 @@
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.text = [[[self.menuArray objectAtIndex:indexPath.row] title] capitalizedString];
     [cell sizeToFit];
-    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor blackColor];
+    cell.backgroundView.alpha = 0.30;
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
     cell.shouldIndentWhileEditing = YES;

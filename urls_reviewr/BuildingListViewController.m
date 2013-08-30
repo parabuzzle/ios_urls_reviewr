@@ -39,10 +39,8 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
         
         // Correctly sized image for device type.. there is probably a better way of doing this..
-        NSString *image_name = @"background-main.png";
-        if (self.view.frame.size.height < 568) {
-            image_name = @"background-main-iphone4.png";
-        }
+        NSString *image_name = @"background-purple.png";
+        self.view.clipsToBounds = YES;
         UIImage *backgroundImage = [UIImage imageNamed:image_name];
         UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
         self.tableView.backgroundView = backgroundView;
