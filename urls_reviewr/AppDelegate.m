@@ -27,8 +27,8 @@
     
     //AccountSetupViewController *removeMe = [[AccountSetupViewController alloc] init];
     //UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:removeMe];
-    
-    
+    nvc.navigationBar.tintColor = [UIColor purpleColor];
+    nvc.navigationBar.backgroundColor = [UIColor blackColor];
     nvc.navigationBar.translucent = YES;
     
     self.window.rootViewController = nvc;

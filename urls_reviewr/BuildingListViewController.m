@@ -12,6 +12,8 @@
 #import "Building.h"
 #import "User.h"
 #import "AccountSetupViewController.h"
+#import "MMProgressHUD.h"
+#import "MMProgressHUDOverlayView.h"
 
 @interface BuildingListViewController ()
 
@@ -117,15 +119,21 @@
 #pragma mark - Private methods
 
 - (void)loadBuildingData {
-
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleFade];
+    [MMProgressHUD showWithTitle:@"Please Wait" status:@"Loading Menus"];
     //Load data from backend server
     [[UrlsClient instance] buildingList:^(AFHTTPRequestOperation *operation, id response) {
         [self convertJsonToArray:response];
+        [MMProgressHUD dismiss];
+        //[MMProgressHUD dismissWithSuccess:@"Done"];
         [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed ==========\n%@", error);
+        [MMProgressHUD dismissWithError:[NSString stringWithFormat:@"Error fetching from server, please try again later.\ncode=%d", error.code] title:@"Error" afterDelay:5];
+        //[MMProgressHUD dismissWithError:@"Error!" title:@"An Error occured"];
     }];
 }
+
 
 - (void)convertJsonToArray:(NSArray *)JSON{
     
