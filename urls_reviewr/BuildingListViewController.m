@@ -35,9 +35,8 @@
         //[self loadBuildingData];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
-        // Custom Background for Each Building
         
-        NSLog(@"%f", self.view.frame.size.height);
+        // Correctly sized image for device type.. there is probably a better way of doing this..
         NSString *image_name = @"background-main.png";
         if (self.view.frame.size.height < 568) {
             image_name = @"background-main-iphone4.png";
