@@ -10,6 +10,8 @@
 #import "User.h"
 #import "UrlsClient.h"
 #import "AFNetworking.h"
+#import "MMProgressHUD.h"
+#import "MMProgressHUDOverlayView.h"
 
 @interface AccountSetupViewController ()
 
@@ -48,11 +50,11 @@
     // Send the username to the server and capture the token, userid, and token
     if ([self.username.text  isEqual: @""]) {
         // Looks like the user didn't enter a username.. throw a dialog!
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Username" message:@"You must enter a username" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing Email" message:@"You must enter an Email Address" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     } else {
         // Verify the user wants this user
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verify Email" message:[NSString stringWithFormat:@"An email will be sent to %@@yahoo-inc.com with verification information. Is this username correct?", self.username.text] delegate:self cancelButtonTitle:@"No, Let Me Edit" otherButtonTitles:@"Yes", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Verify Email" message:[NSString stringWithFormat:@"An email will be sent to %@ with verification information. Is this email correct?", self.username.text] delegate:self cancelButtonTitle:@"No, Let Me Edit" otherButtonTitles:@"Yes", nil];
         [alert show];
     }
 }
@@ -81,16 +83,21 @@
 
 - (void) onSaveUser
 {
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleShrink];
+    [MMProgressHUD showWithTitle:@"Saving" status:@"please wait"];
     // Initalize User object from successful response and close the modal view... or inform the user something went wrong.
     [[UrlsClient instance] userInit:self.username.text success:^(AFHTTPRequestOperation *operation, id response) {
         User *user = [[User alloc] initWithDictionary:response];
         [user saveLocal];
+        [MMProgressHUD dismissWithSuccess:@"Success!"];
         [self dismissViewControllerAnimated:YES completion:nil];
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
         // The request was a failure.. :(
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:@"Something went wrong on the server side, please try your request again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
+        //UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:@"Something went wrong on the server side, please try your request again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //[alert show];
+        [MMProgressHUD dismissWithError:@"Something went wrong"];
     }];
 }
 
