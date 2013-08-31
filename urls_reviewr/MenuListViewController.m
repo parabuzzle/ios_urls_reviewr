@@ -122,7 +122,7 @@
     
     cell.textLabel.text = [[[tempMenu.menuItems objectAtIndex:indexPath.row] title] capitalizedString];
     [cell sizeToFit];
-    cell.backgroundColor = [UIColor blackColor];
+    cell.backgroundColor = [UIColor clearColor];
     cell.backgroundView.alpha = 0.30;
     cell.textLabel.textColor = [UIColor whiteColor];
     cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
