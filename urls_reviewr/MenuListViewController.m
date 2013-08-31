@@ -38,18 +38,9 @@
     [super viewDidLoad];
     
     self.title = self.selectedBuidling;
-    //NSLog([NSString stringWithFormat:@"Menu object: %@", self.selectedBuidling]);
-    
     [self loadMenuData];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    //self.tableView.backgroundView = [UIImageView alloc];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (id)initWithName:(NSString *)theName{
@@ -91,14 +82,30 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-#warning The Sections should indicate meal time.. so we have a nice section for each mealtime..
-    return 1;
+    return self.menuArray.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    NSLog(@"Section %d count: %d", section, [[[self.menuArray objectAtIndex:section] menuItems] count]);
     // Return the number of rows in the section.
-    return self.menuArray.count;
+    switch (section) {
+        case 0:
+            //NSLog(@"Section %d count: %d", section, [[[self.menuArray objectAtIndex:section] menuItems] count]);
+            return [[[self.menuArray objectAtIndex:section] menuItems] count];
+            break;
+        case 1:
+            return [[[self.menuArray objectAtIndex:section] menuItems] count];
+            break;
+        case 2:
+            return [[[self.menuArray objectAtIndex:section] menuItems] count];
+            break;
+        default:
+            break;
+    }
+    
+    return 1;
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,7 +118,9 @@
     
     // Configure the cell...
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.text = [[[self.menuArray objectAtIndex:indexPath.row] title] capitalizedString];
+    Menu *tempMenu = [self.menuArray objectAtIndex:indexPath.section];
+    
+    cell.textLabel.text = [[[tempMenu.menuItems objectAtIndex:indexPath.row] title] capitalizedString];
     [cell sizeToFit];
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -145,34 +154,64 @@
     NSDictionary *current;
     NSDictionary *menu;
     
-    self.menuArray = [[NSMutableArray alloc] initWithCapacity:[JSON count]];
+    self.menuArray = [[NSMutableArray alloc] initWithCapacity:3];
     for (int i=0; i < [JSON count]; i++) {
         current = [JSON objectAtIndex:i];
         
         menu = [current objectForKey:self.selectedBuidling];
         
         if(menu){
-            [self addMealTimeMenu:@"breakfast" withMenu:menu];
-            [self addMealTimeMenu:@"lunch" withMenu:menu];
-            [self addMealTimeMenu:@"dinner" withMenu:menu];
+            [self addMealTimeMenu:@"breakfast" withMenu:menu withIndex:0];
+            [self addMealTimeMenu:@"lunch" withMenu:menu withIndex:1];
+            [self addMealTimeMenu:@"dinner" withMenu:menu withIndex:2];
         }
         
     }
     
 }
 
-- (void)addMealTimeMenu:(NSString *)mealtime withMenu:(NSDictionary *)menuDictionary{
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+    headerView.backgroundColor = [UIColor clearColor];
     
-    NSDictionary *current = [menuDictionary objectForKey:mealtime];
-    NSArray *menus = [current objectForKey:@"menus"];
-    Menu *menu;
-    
-    for(int i=0; i < menus.count; i++){
-        menu = [Menu fromJSON:[menus objectAtIndex:i]];
-        for (int i = 0; i < menu.menuItems.count; i++) {
-            [self.menuArray addObject:[menu.menuItems objectAtIndex:i]];
-        }
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 40)];
+    titleLabel.textColor = [UIColor greenColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:18];
+    switch (section) {
+        case 0:
+            titleLabel.text = @"Breakfast";
+            break;
+        case 1:
+            titleLabel.text = @"Lunch";
+            break;
+        case 2:
+            titleLabel.text = @"Dinner";
+            break;
+        default:
+            break;
     }
+    
+    [headerView addSubview:titleLabel];
+    
+    return headerView;
+}
+
+- (float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 40;
+}
+
+- (void)addMealTimeMenu:(NSString *)mealtime withMenu:(NSDictionary *)menuDictionary withIndex:(NSInteger)index{
+    
+    NSDictionary *menus = [menuDictionary objectForKey:mealtime];
+    
+    if(menus){
+        Menu *menu = [Menu fromJSON:menus];
+        [self.menuArray insertObject:menu atIndex:index];
+    } else {
+       [self.menuArray insertObject:[[Menu alloc] init] atIndex:index];
+    }
+    
+    
     
 }
 
@@ -183,7 +222,8 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    MenuItemViewController *menuViewController = [[MenuItemViewController alloc] initWithName:[self.menuArray objectAtIndex:indexPath.row]];
+    Menu *selectedMenu = [self.menuArray objectAtIndex:indexPath.section];
+    MenuItemViewController *menuViewController = [[MenuItemViewController alloc] initWithName:[selectedMenu.menuItems objectAtIndex:indexPath.row]];
 
     // Pass the selected object to the new view controller.
     

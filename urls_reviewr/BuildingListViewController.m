@@ -142,10 +142,7 @@
     // Navigation logic may go here, for example:
     // Create the next view controller.
     self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildings objectAtIndex:indexPath.row]];
-
-    // Pass the selected object to the new view controller.
-    NSLog([NSString stringWithFormat:@"Selected object: %@", [self.buildings objectAtIndex:indexPath.row]]);
-    
+ 
     // Push the view controller.
     [self.navigationController pushViewController:menuListViewController animated:YES];
 }

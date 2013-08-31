@@ -45,8 +45,8 @@
              failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self getPath:@"today.json" parameters:nil success:success failure:failure];
-    //[self getPath:@"all_by_date.json" parameters:@{@"date":@"8-27"} success:success failure:failure];
+    //[self getPath:@"today.json" parameters:nil success:success failure:failure];
+    [self getPath:@"all_by_date.json" parameters:@{@"date":@"8-29"} success:success failure:failure];
     
 }
 
@@ -72,8 +72,8 @@
 - (void)todaysMenu:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self getPath:@"today.json" parameters:nil success:success failure:failure];
-    //[self getPath:@"all_by_date.json" parameters:@{@"date":@"8-27"} success:success failure:failure];
+    //[self getPath:@"today.json" parameters:nil success:success failure:failure];
+    [self getPath:@"all_by_date.json" parameters:@{@"date":@"8-29"} success:success failure:failure];
 }
 
 
