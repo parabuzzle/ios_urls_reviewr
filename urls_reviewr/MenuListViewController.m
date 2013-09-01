@@ -12,6 +12,7 @@
 #import "AFNetworking.h"
 #import "MenuItem.h"
 #import "UrlsClient.h"
+#import "MenuItemCell.h"
 
 @interface MenuListViewController ()
 
@@ -22,6 +23,8 @@
 @end
 
 @implementation MenuListViewController
+
+@synthesize menuItemCell = _menuItemCell;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -111,26 +114,41 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[NSBundle mainBundle] loadNibNamed:@"MenuItemCell" owner:self options:nil];
+        cell = _menuItemCell;
     }
     
     // Configure the cell...
-    cell.textLabel.numberOfLines = 0;
-    Menu *tempMenu = [self.menuArray objectAtIndex:indexPath.section];
+    Menu *currentMenu = [self.menuArray objectAtIndex:indexPath.section];
+    MenuItem *selectedMenuItem = [currentMenu.menuItems objectAtIndex:indexPath.row];
+    cell.menuItemTitleLabel.text = [[selectedMenuItem title] capitalizedString];
     
-    cell.textLabel.text = [[[tempMenu.menuItems objectAtIndex:indexPath.row] title] capitalizedString];
-    [cell sizeToFit];
     cell.backgroundColor = [UIColor clearColor];
     cell.backgroundView.alpha = 0.30;
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.font = [UIFont boldSystemFontOfSize:14];
+    cell.frame = CGRectMake(0, cell.frame.origin.y, cell.frame.size.width, 100);
+
+    cell.menuItemTitleLabel.textColor = [UIColor whiteColor];
+    cell.menuItemTitleLabel.font = [UIFont boldSystemFontOfSize:14];
+    cell.menuItemTitleLabel.textAlignment = UITextAlignmentLeft;
+    //cell.menuItemTitleLabel.frame = CGRectMake(0, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
+    cell.reviewsLabel.textColor = [UIColor whiteColor];
+    cell.reviewsLabel.font = [UIFont boldSystemFontOfSize:12];
+    cell.reviewsLabel.text = [NSString stringWithFormat:@"%d reviews", selectedMenuItem.reviewers];
+    cell.ratingImage.image = [UIImage imageNamed:[selectedMenuItem ratingImageName]];
+    cell.ratingLabel.textColor = [UIColor whiteColor];
+    cell.ratingLabel.font = [UIFont boldSystemFontOfSize:12];
+    cell.ratingLabel.text = [NSString stringWithFormat:@"%@/5", [selectedMenuItem stringFormattedRating]];
     cell.shouldIndentWhileEditing = YES;
     UIView *selectedBackgroundViewForCell = [UIView new];
     [selectedBackgroundViewForCell setBackgroundColor:[UIColor purpleColor]];
     cell.selectedBackgroundView = selectedBackgroundViewForCell;
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0;
 }
 
 #pragma mark - Private methods

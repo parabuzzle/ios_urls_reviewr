@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuItemCell.h"
 
 @interface MenuListViewController : UITableViewController
 
 @property (nonatomic, retain) NSString *selectedBuidling;
+@property (assign, nonatomic) IBOutlet MenuItemCell *menuItemCell;
 
 - (id)initWithName:(NSString *)theName;
 

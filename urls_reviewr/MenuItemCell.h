@@ -10,4 +10,11 @@
 
 @interface MenuItemCell : UITableViewCell
 
+@property (nonatomic, strong) IBOutlet UILabel *menuItemTitleLabel;
+@property (nonatomic, strong) IBOutlet UIImageView *ratingImage;
+@property (nonatomic, strong) IBOutlet UILabel *reviewsLabel;
+@property (nonatomic, strong) IBOutlet UILabel *ratingLabel;
+
++ (NSString *)reuseIdentifier;
+
 @end

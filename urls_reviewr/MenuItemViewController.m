@@ -60,7 +60,7 @@
     
     self.menuItemDescription.text = self.menuItem.description;
     self.menuItemName.text = self.menuItem.title;
-    self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.rating];
+    self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.stringFormattedRating];
     self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
     
 }
