@@ -12,6 +12,7 @@
                 <outlet property="menuItemName" destination="tyS-uk-dNe" id="ft2-h5-ZmD"/>
                 <outlet property="menuItemRating" destination="ncI-BM-OmN" id="5Ic-tU-2jh"/>
                 <outlet property="numberOfComments" destination="eH5-Ne-6NC" id="oiu-zY-SHo"/>
+                <outlet property="ratingsImageView" destination="iFo-72-y4U" id="bzh-2E-8yB"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -47,7 +48,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5stars.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFo-72-y4U">
-                    <rect key="frame" x="20" y="53" width="86" height="85"/>
+                    <rect key="frame" x="20" y="68" width="77" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncI-BM-OmN">

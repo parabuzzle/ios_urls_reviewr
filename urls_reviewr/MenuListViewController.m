@@ -132,7 +132,6 @@
     cell.menuItemTitleLabel.textColor = [UIColor whiteColor];
     cell.menuItemTitleLabel.font = [UIFont boldSystemFontOfSize:14];
     cell.menuItemTitleLabel.textAlignment = UITextAlignmentLeft;
-    //cell.menuItemTitleLabel.frame = CGRectMake(0, cell.frame.origin.y, cell.frame.size.width, cell.frame.size.height);
     cell.reviewsLabel.textColor = [UIColor whiteColor];
     cell.reviewsLabel.font = [UIFont boldSystemFontOfSize:12];
     cell.reviewsLabel.text = [NSString stringWithFormat:@"%d reviews", selectedMenuItem.reviewers];
