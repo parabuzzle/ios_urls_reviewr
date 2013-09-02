@@ -80,6 +80,7 @@
 		30FBDAE717D0EE4100872628 /* background-main.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FBDAE617D0EE4100872628 /* background-main.png */; };
 		30FBDAE917D0F0D300872628 /* background-main-iphone4.png in Resources */ = {isa = PBXBuildFile; fileRef = 30FBDAE817D0F0D300872628 /* background-main-iphone4.png */; };
 		3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */; };
+		3B9707DA17D3CCB0006FE6E0 /* MenuItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9707D917D3CCB0006FE6E0 /* MenuItemTest.m */; };
 		3BAFE1AD17C319280025C584 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1AC17C319280025C584 /* MenuItem.m */; };
 		3BAFE1B517C342220025C584 /* UrlsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B417C342220025C584 /* UrlsClient.m */; };
 		3BAFE1B917C3EBC90025C584 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B817C3EBC90025C584 /* RestObject.m */; };
@@ -186,6 +187,7 @@
 		30FBDAE617D0EE4100872628 /* background-main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main.png"; sourceTree = "<group>"; };
 		30FBDAE817D0F0D300872628 /* background-main-iphone4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main-iphone4.png"; sourceTree = "<group>"; };
 		3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "url-s-yahoo-main-cafeteria.jpg"; path = "Images.xcassets/url-s-yahoo-main-cafeteria.jpg"; sourceTree = "<group>"; };
+		3B9707D917D3CCB0006FE6E0 /* MenuItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemTest.m; sourceTree = "<group>"; };
 		3BAFE1AB17C319280025C584 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		3BAFE1AC17C319280025C584 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		3BAFE1B317C342220025C584 /* UrlsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlsClient.h; sourceTree = "<group>"; };
@@ -389,6 +391,7 @@
 			children = (
 				30AA841417A9F2F700B6BCE2 /* urls_reviewrTests.m */,
 				30AA840F17A9F2F700B6BCE2 /* Supporting Files */,
+				3B9707D917D3CCB0006FE6E0 /* MenuItemTest.m */,
 			);
 			path = urls_reviewrTests;
 			sourceTree = "<group>";
@@ -651,6 +654,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30AA841517A9F2F700B6BCE2 /* urls_reviewrTests.m in Sources */,
+				3B9707DA17D3CCB0006FE6E0 /* MenuItemTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,7 +805,7 @@
 		30AA841C17A9F2F700B6BCE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/urls_reviewr.app/urls_reviewr";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cafes.app/Cafes";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -823,7 +827,7 @@
 		30AA841D17A9F2F700B6BCE2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/urls_reviewr.app/urls_reviewr";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Cafes.app/Cafes";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

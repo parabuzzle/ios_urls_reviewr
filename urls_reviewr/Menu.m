@@ -19,14 +19,19 @@
     return self;
 }
 
-+ (Menu *)fromJSON:(NSDictionary *)jsonDictionary {
++ (Menu *)fromJSON:(NSDictionary *)mealtimeJson {
     
     Menu *menu = [[Menu alloc] init];
+    NSArray *menus = [mealtimeJson objectForKey:@"menus"];
     
-    NSArray *menuItems = [jsonDictionary objectForKey:@"menu_items"];
-    for(int i=0; i < menuItems.count; i++){
-        MenuItem *menuItem = [MenuItem fromJSON:[menuItems objectAtIndex:i]];
-        [menu.menuItems addObject:menuItem];
+    for(int i=0; i < menus.count; i++){
+        NSDictionary *jsonMenu = [menus objectAtIndex:i];
+        NSArray *menuItems = [jsonMenu objectForKey:@"menu_items"];
+        for (int j=0; j < menuItems.count; j++) {
+            MenuItem *menuItem = [MenuItem fromJSON:[menuItems objectAtIndex:j]];
+            [menu.menuItems addObject:menuItem];
+        }
+        
     }
     
     return menu;

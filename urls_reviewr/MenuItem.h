@@ -21,7 +21,7 @@
 @property (nonatomic) BOOL vegan;
 @property (nonatomic) BOOL farmToFork;
 @property (nonatomic) BOOL seafoodWatch;
-@property (nonatomic, strong) NSString *rating;
+@property (nonatomic, strong) NSNumber *rating;
 @property (nonatomic) NSInteger reviewers;
 @property (nonatomic, strong) NSMutableArray *commentsList;
 @property (nonatomic, strong) NSString *createdAt;
@@ -29,5 +29,7 @@
 
 + (NSMutableArray *)menuItemWithArray:(NSArray *)array;
 + (MenuItem *)fromJSON:(NSDictionary *)JsonDictionary;
+- (NSString *)ratingImageName;
+- (NSString *)stringFormattedRating;
 
 @end
