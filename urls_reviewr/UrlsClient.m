@@ -46,8 +46,21 @@
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     //[self getPath:@"today.json" parameters:nil success:success failure:failure];
-    [self getPath:@"all_by_date.json" parameters:@{@"date":@"8-29"} success:success failure:failure];
+    [self getPath:@"today.json" parameters:nil success:success failure:failure];
     
+}
+
+- (void)buildingListForDate:(NSString *) date success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
+    
+    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self getPath:@"all_by_date.json" parameters:@{@"date":date} success:success failure:failure];
+    
+}
+
+- (void)menuDates: (void (^)(AFHTTPRequestOperation *operation, id response))successs
+          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self getPath:@"recent_dates_with_menus.json" parameters:@{@"limit":@"1"} success:successs failure:failure];
 }
 
 #pragma mark - User API
@@ -73,8 +86,15 @@
 {
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     //[self getPath:@"today.json" parameters:nil success:success failure:failure];
-    [self getPath:@"all_by_date.json" parameters:@{@"date":@"8-29"} success:success failure:failure];
+    [self getPath:@"today.json" parameters:nil success:success failure:failure];
 }
+
+- (void)menuByDate:(NSString *) date success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
+{
+    [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [self getPath:@"all_by_date.json" parameters:@{@"date":date} success:success failure:failure];
+}
+
 
 #pragma mark - GET Comments API
 - (void)getCommentsWithMenuItemId:(NSInteger *)menuItemId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{

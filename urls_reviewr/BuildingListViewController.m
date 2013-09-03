@@ -122,9 +122,23 @@
     //Load data from backend server
     [[UrlsClient instance] buildingList:^(AFHTTPRequestOperation *operation, id response) {
         [self convertJsonToArray:response];
-        [MMProgressHUD dismiss];
-        //[MMProgressHUD dismissWithSuccess:@"Done"];
+        self.doc = response;
+        
+        // This is a dirty way of getting the newest menu if there isn't a menu for "Today"
+        if (self.buildings.count == 0) {
+            [[UrlsClient instance] menuDates:^(AFHTTPRequestOperation *operation, id response) {
+                [[UrlsClient instance] buildingListForDate:response[0] success:^(AFHTTPRequestOperation *operation, id json) {
+                    self.buildings = nil;
+                    [self convertJsonToArray:json];
+                    self.doc = json;
+                    [self.tableView reloadData];
+                }failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
+        }
+        
+        
         [self.tableView reloadData];
+        [MMProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed ==========\n%@", error);
         [MMProgressHUD dismissWithError:[NSString stringWithFormat:@"Error fetching from server, please try again later.\ncode=%d", error.code] title:@"Error" afterDelay:5];
@@ -149,7 +163,7 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildings objectAtIndex:indexPath.row]];
+    self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildings objectAtIndex:indexPath.row] andDoc:self.doc];
  
     // Push the view controller.
     [self.navigationController pushViewController:menuListViewController animated:YES];

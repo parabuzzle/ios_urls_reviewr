@@ -13,5 +13,6 @@
 
 @property (nonatomic, retain) MenuListViewController *menuListViewController;
 @property (nonatomic, weak) IBOutlet UITableView *buildingTableView;
+@property (nonatomic, retain) NSArray *doc;
 
 @end

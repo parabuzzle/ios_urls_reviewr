@@ -13,7 +13,8 @@
 
 @property (nonatomic, retain) NSString *selectedBuidling;
 @property (assign, nonatomic) IBOutlet MenuItemCell *menuItemCell;
+@property (nonatomic, retain) NSArray *doc;
 
-- (id)initWithName:(NSString *)theName;
+- (id)initWithName:(NSString *)theName andDoc:(NSArray *)doc;
 
 @end

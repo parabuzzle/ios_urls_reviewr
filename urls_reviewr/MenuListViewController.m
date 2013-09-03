@@ -46,10 +46,11 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
-- (id)initWithName:(NSString *)theName{
+- (id)initWithName:(NSString *)theName andDoc:(NSArray *)doc {
     self = [super initWithNibName:@"MenuListViewController" bundle:nil];
     if (self) {
         self.selectedBuidling = [theName copy];
+        self.doc = doc;
         
         // Custom Background for Each Building
         NSString *image_name = @"peppers-clear.png";
@@ -157,8 +158,9 @@
     //Load data from backend server
     [[UrlsClient instance] todaysMenu:^(AFHTTPRequestOperation *operation, id response) {
     
-        NSLog(@"%@", response);
-        [self convertMenuJsonToArray:response];
+        //NSLog(@"%@", response);
+        //[self convertMenuJsonToArray:response];
+        [self convertMenuJsonToArray:self.doc];
         [self.tableView reloadData];
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
