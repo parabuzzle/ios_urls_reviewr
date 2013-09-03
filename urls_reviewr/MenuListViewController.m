@@ -41,7 +41,6 @@
     [super viewDidLoad];
     
     self.title = self.selectedBuidling;
-    [self loadMenuData];
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
@@ -51,6 +50,7 @@
     if (self) {
         self.selectedBuidling = [theName copy];
         self.doc = doc;
+        [self loadMenuData];
         
         // Custom Background for Each Building
         NSString *image_name = @"peppers-clear.png";
@@ -127,7 +127,7 @@
     cell.menuItemTitleLabel.text = [[selectedMenuItem title] capitalizedString];
     
     cell.backgroundColor = [UIColor clearColor];
-    cell.backgroundView.alpha = 0.30;
+    //cell.backgroundView.alpha = 0.30;
     cell.frame = CGRectMake(0, cell.frame.origin.y, cell.frame.size.width, 100);
 
     cell.menuItemTitleLabel.textColor = [UIColor whiteColor];

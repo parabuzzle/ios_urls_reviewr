@@ -22,6 +22,12 @@
     }
     return self;
 }
+- (IBAction)onCancelButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)onSaveButton:(id)sender {
+    // Do stuff
+}
 
 - (void)viewDidLoad
 {

@@ -21,6 +21,15 @@
             <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="round-rating5-special-150.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFo-72-y4U">
+                    <rect key="frame" x="25" y="73" width="76" height="76"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="plb-yl-vgh" appends="YES" id="5yW-l8-zmJ"/>
+                        <outletCollection property="gestureRecognizers" destination="plb-yl-vgh" appends="YES" id="37c-Td-P44"/>
+                    </connections>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rgK-Be-Isw">
                     <rect key="frame" x="0.0" y="254" width="320" height="250"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,14 +39,14 @@
                     <rect key="frame" x="114" y="73" width="186" height="129"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="with orange buerre blanc, black-eyed peas, and Field to Fork Farms collard Greens smoked bacon" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-Fj-rfQ">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="with orange buerre blanc, black-eyed peas, and Field to Fork Farms collard Greens smoked bacon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="159" translatesAutoresizingMaskIntoConstraints="NO" id="CTE-Fj-rfQ">
                             <rect key="frame" x="14" y="36" width="159" height="93"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.89965959139999996" green="0.88679840939999999" blue="0.90833050270000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9312622900722789" green="0.91547818346088439" blue="0.94704639668367352" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7SN-Kn-J2v">
                     <rect key="frame" x="114" y="73" width="186" height="36"/>
@@ -60,10 +69,6 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5stars.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFo-72-y4U">
-                    <rect key="frame" x="25" y="73" width="76" height="76"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncI-BM-OmN">
                     <rect key="frame" x="51" y="152" width="25" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -82,8 +87,13 @@
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="plb-yl-vgh">
+            <connections>
+                <action selector="addRating" destination="-1" id="MxE-Dp-lMV"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="5stars.png" width="84.720001220703125" height="84.720001220703125"/>
+        <image name="round-rating5-special-150.png" width="36" height="36"/>
     </resources>
 </document>
