@@ -115,9 +115,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MenuItemCell *cell = (MenuItemCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[NSBundle mainBundle] loadNibNamed:@"MenuItemCell" owner:self options:nil];
+        cell = (MenuItemCell *) [[NSBundle mainBundle] loadNibNamed:@"MenuItemCell" owner:self options:nil];
         cell = _menuItemCell;
     }
     
