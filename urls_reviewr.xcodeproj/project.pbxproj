@@ -10,7 +10,6 @@
 		301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */; };
 		301E648917B1BB5F00FDCC67 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */; };
 		3049EE0417D63429005A9918 /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */; };
-		3049EE0517D63764005A9918 /* 3-5-stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA91117B1BE7800B729FB /* 3-5-stars.png */; };
 		3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205517B18BFC003F4B54 /* MenuViewController.m */; };
 		3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205617B18BFC003F4B54 /* MenuViewController.xib */; };
 		3060205C17B18C3E003F4B54 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205A17B18C3E003F4B54 /* MenuItemViewController.m */; };
@@ -69,6 +68,7 @@
 		30BFEA5317D1476000904F17 /* background-main-v2-dark-iphone4-548.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5117D1476000904F17 /* background-main-v2-dark-iphone4-548.png */; };
 		30BFEA5417D1476000904F17 /* background-main-v2-dark-iphone4-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5217D1476000904F17 /* background-main-v2-dark-iphone4-568.png */; };
 		30BFEA5617D14A3B00904F17 /* background-purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5517D14A3B00904F17 /* background-purple.png */; };
+		30C8201E17D65460004C64C9 /* 3-5-stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C8201D17D65460004C64C9 /* 3-5-stars.png */; };
 		30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */; };
 		30DFA90017B1BD3D00B729FB /* BuildingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */; };
 		30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */; };
@@ -123,7 +123,6 @@
 		3060205B17B18C3E003F4B54 /* MenuItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemViewController.xib; sourceTree = "<group>"; };
 		3060205E17B18C77003F4B54 /* MenuItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItemCell.h; sourceTree = "<group>"; };
 		3060205F17B18C77003F4B54 /* MenuItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItemCell.m; sourceTree = "<group>"; };
-		3060206217B19190003F4B54 /* 5stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5stars.png; path = ../../../../../../Desktop/5stars.png; sourceTree = "<group>"; };
 		3065242717D00839001D9D7D /* bldg-e-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-e-clear-tall.png"; sourceTree = "<group>"; };
 		3065242817D00839001D9D7D /* bldg-f-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-f-clear-tall.png"; sourceTree = "<group>"; };
 		3065242917D00839001D9D7D /* bldg-g-clear-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-g-clear-tall.png"; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		30BFEA5117D1476000904F17 /* background-main-v2-dark-iphone4-548.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main-v2-dark-iphone4-548.png"; sourceTree = "<group>"; };
 		30BFEA5217D1476000904F17 /* background-main-v2-dark-iphone4-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main-v2-dark-iphone4-568.png"; sourceTree = "<group>"; };
 		30BFEA5517D14A3B00904F17 /* background-purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-purple.png"; sourceTree = "<group>"; };
+		30C8201D17D65460004C64C9 /* 3-5-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-5-stars.png"; sourceTree = "<group>"; };
 		30DFA8FA17B1BD0700B729FB /* ReviewCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCommentCell.h; sourceTree = "<group>"; };
 		30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCommentCell.m; sourceTree = "<group>"; };
 		30DFA8FD17B1BD3D00B729FB /* BuildingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingListViewController.h; sourceTree = "<group>"; };
@@ -195,7 +195,6 @@
 		30DFA90C17B1BE4C00B729FB /* AddRatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRatingViewController.h; sourceTree = "<group>"; };
 		30DFA90D17B1BE4C00B729FB /* AddRatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRatingViewController.m; sourceTree = "<group>"; };
 		30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddRatingViewController.xib; sourceTree = "<group>"; };
-		30DFA91117B1BE7800B729FB /* 3-5-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3-5-stars.png"; path = "../../../../../../Desktop/3-5-stars.png"; sourceTree = "<group>"; };
 		30F15DFB17D1731E006C60B8 /* round-rating0-150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating0-150.png"; sourceTree = "<group>"; };
 		30F15DFC17D1731E006C60B8 /* round-rating05-150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating05-150.png"; sourceTree = "<group>"; };
 		30F15DFD17D1731E006C60B8 /* round-rating1-150.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating1-150.png"; sourceTree = "<group>"; };
@@ -320,6 +319,7 @@
 		3067B57F17CFBDFD004AECFD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				30C8201C17D65460004C64C9 /* Misc Assets */,
 				30F15DFA17D1731E006C60B8 /* Rating Assets */,
 				3065242617D00839001D9D7D /* Background Images */,
 				3067B59217CFC6C7004AECFD /* App Icons */,
@@ -401,8 +401,6 @@
 			isa = PBXGroup;
 			children = (
 				3B610A2617CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg */,
-				30DFA91117B1BE7800B729FB /* 3-5-stars.png */,
-				3060206217B19190003F4B54 /* 5stars.png */,
 				30AA83F317A9F2F700B6BCE2 /* urls_reviewr-Info.plist */,
 				30AA83F417A9F2F700B6BCE2 /* InfoPlist.strings */,
 				30AA83F717A9F2F700B6BCE2 /* main.m */,
@@ -428,6 +426,14 @@
 				30AA841117A9F2F700B6BCE2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30C8201C17D65460004C64C9 /* Misc Assets */ = {
+			isa = PBXGroup;
+			children = (
+				30C8201D17D65460004C64C9 /* 3-5-stars.png */,
+			);
+			path = "Misc Assets";
 			sourceTree = "<group>";
 		};
 		30F15DFA17D1731E006C60B8 /* Rating Assets */ = {
@@ -598,7 +604,7 @@
 				30F15E0917D1731E006C60B8 /* round-rating1-150.png in Resources */,
 				30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */,
 				3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */,
-				3049EE0517D63764005A9918 /* 3-5-stars.png in Resources */,
+				30C8201E17D65460004C64C9 /* 3-5-stars.png in Resources */,
 				30BFEA4617D142BE00904F17 /* icon-v2-1024.png in Resources */,
 				30F15E0D17D1731E006C60B8 /* round-rating3-150.png in Resources */,
 				307B60A817D5A8E50008EE87 /* round-rating2-150-white.png in Resources */,
