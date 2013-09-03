@@ -11,68 +11,72 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="120" id="2" customClass="MenuItemCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+        <tableViewCell autoresizesSubviews="NO" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="80" id="2" customClass="MenuItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2" id="6zl-0I-3eK">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cornmeal Crushed Catfish" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="236" translatesAutoresizingMaskIntoConstraints="NO" id="3">
-                        <rect key="frame" x="64" y="9" width="236" height="40"/>
+                    <view alpha="0.24999999999999967" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDd-RS-YDW">
+                        <rect key="frame" x="0.0" y="4" width="320" height="73"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="20"/>
-                            <constraint firstAttribute="width" constant="236" id="21"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="56 reviews" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
-                        <rect key="frame" x="218" y="96" width="82" height="21"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view alpha="0.59999999999999964" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Pk-1h-QrE">
+                        <rect key="frame" x="0.0" y="4" width="63" height="73"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="17"/>
-                            <constraint firstAttribute="width" constant="82" id="18"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="5stars.png" translatesAutoresizingMaskIntoConstraints="NO" id="22">
-                        <rect key="frame" x="6" y="4" width="50" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="50" id="36"/>
-                            <constraint firstAttribute="height" constant="50" id="40"/>
-                        </constraints>
-                    </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="5/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46">
-                        <rect key="frame" x="10" y="46" width="42" height="26"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="42" id="50"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </label>
+                        <color key="backgroundColor" red="1" green="0.9461541735983614" blue="0.85627622799094083" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kz8-M7-C9I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" text="56 reviews" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                                <rect key="frame" x="218" y="54" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="17"/>
+                                    <constraint firstAttribute="width" constant="82" id="18"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="5/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46">
+                                <rect key="frame" x="10" y="56" width="42" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="50"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" image="round-rating5-special-150.png" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                                <rect key="frame" x="5" y="9" width="53" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="36"/>
+                                    <constraint firstAttribute="height" constant="50" id="40"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" ambiguous="YES" misplaced="YES" text="Cornmeal Crushed Catfish" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="215" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                                <rect key="frame" x="85" y="9" width="215" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="20"/>
+                                    <constraint firstAttribute="width" constant="236" id="21"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
-                <constraints>
-                    <constraint firstItem="3" firstAttribute="trailing" secondItem="11" secondAttribute="trailing" id="ifa-2a-9Yd"/>
-                </constraints>
             </tableViewCellContentView>
-            <constraints>
-                <constraint firstItem="22" firstAttribute="top" secondItem="2" secondAttribute="top" constant="4" id="5kK-o3-U7L"/>
-                <constraint firstItem="46" firstAttribute="centerY" secondItem="11" secondAttribute="centerY" id="8R7-hm-2GW"/>
-                <constraint firstItem="46" firstAttribute="centerX" secondItem="22" secondAttribute="centerX" id="Iep-6j-BNg"/>
-                <constraint firstAttribute="trailing" secondItem="11" secondAttribute="trailing" constant="20" id="JW7-MS-g5i"/>
-                <constraint firstItem="3" firstAttribute="leading" secondItem="22" secondAttribute="trailing" constant="8" symbolic="YES" id="LvP-iO-nt2"/>
-                <constraint firstItem="3" firstAttribute="centerY" secondItem="22" secondAttribute="centerY" id="UDu-eN-XWc"/>
-                <constraint firstAttribute="bottom" secondItem="46" secondAttribute="bottom" constant="1" id="XJu-cZ-Mjs"/>
-                <constraint firstItem="46" firstAttribute="baseline" secondItem="11" secondAttribute="baseline" id="nsT-NW-hwi"/>
-            </constraints>
             <connections>
                 <outlet property="menuItemTitleLabel" destination="3" id="ZJH-lA-ZwL"/>
                 <outlet property="ratingImage" destination="22" id="2az-GJ-UIF"/>
@@ -82,6 +86,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="5stars.png" width="84.720001220703125" height="84.720001220703125"/>
+        <image name="round-rating5-special-150.png" width="36" height="36"/>
     </resources>
 </document>

@@ -132,12 +132,12 @@
 
     cell.menuItemTitleLabel.textColor = [UIColor whiteColor];
     cell.menuItemTitleLabel.font = [UIFont boldSystemFontOfSize:14];
-    cell.menuItemTitleLabel.textAlignment = UITextAlignmentLeft;
+    //cell.menuItemTitleLabel.textAlignment = UITextAlignmentLeft;
     cell.reviewsLabel.textColor = [UIColor whiteColor];
     cell.reviewsLabel.font = [UIFont boldSystemFontOfSize:12];
     cell.reviewsLabel.text = [NSString stringWithFormat:@"%d reviews", selectedMenuItem.reviewers];
     cell.ratingImage.image = [UIImage imageNamed:[selectedMenuItem ratingImageName]];
-    cell.ratingLabel.textColor = [UIColor whiteColor];
+    cell.ratingLabel.textColor = [UIColor blackColor];
     cell.ratingLabel.font = [UIFont boldSystemFontOfSize:12];
     cell.ratingLabel.text = [NSString stringWithFormat:@"%@/5", [selectedMenuItem stringFormattedRating]];
     cell.shouldIndentWhileEditing = YES;
@@ -191,11 +191,12 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
-    headerView.backgroundColor = [UIColor clearColor];
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 300, 40)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     titleLabel.textColor = [UIColor greenColor];
+    titleLabel.backgroundColor = [UIColor blackColor];
+    titleLabel.alpha = 0.8;
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
     switch (section) {
         case 0:

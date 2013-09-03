@@ -22,6 +22,18 @@
 		3065243217D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3065242C17D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg */; };
 		3065243417D0146A001D9D7D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3065243317D0146A001D9D7D /* SystemConfiguration.framework */; };
 		3065243617D014A9001D9D7D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3065243517D014A9001D9D7D /* MobileCoreServices.framework */; };
+		307B60A617D5A8E50008EE87 /* round-rating1-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B609B17D5A8E50008EE87 /* round-rating1-150-white.png */; };
+		307B60A717D5A8E50008EE87 /* round-rating15-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B609C17D5A8E50008EE87 /* round-rating15-150-white.png */; };
+		307B60A817D5A8E50008EE87 /* round-rating2-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B609D17D5A8E50008EE87 /* round-rating2-150-white.png */; };
+		307B60A917D5A8E50008EE87 /* round-rating25-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B609E17D5A8E50008EE87 /* round-rating25-150-white.png */; };
+		307B60AA17D5A8E50008EE87 /* round-rating3-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B609F17D5A8E50008EE87 /* round-rating3-150-white.png */; };
+		307B60AB17D5A8E50008EE87 /* round-rating35-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B60A017D5A8E50008EE87 /* round-rating35-150-white.png */; };
+		307B60AC17D5A8E50008EE87 /* round-rating4-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B60A117D5A8E50008EE87 /* round-rating4-150-white.png */; };
+		307B60AD17D5A8E50008EE87 /* round-rating45-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B60A217D5A8E50008EE87 /* round-rating45-150-white.png */; };
+		307B60AE17D5A8E50008EE87 /* round-rating5-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B60A317D5A8E50008EE87 /* round-rating5-150-white.png */; };
+		307B60AF17D5A8E50008EE87 /* round-rating5-special-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B60A417D5A8E50008EE87 /* round-rating5-special-150-white.png */; };
+		307B60B017D5A8E50008EE87 /* round-rating05-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B60A517D5A8E50008EE87 /* round-rating05-150-white.png */; };
+		307B60B117D5A8EC0008EE87 /* round-rating0-150-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 307B609A17D5A80E0008EE87 /* round-rating0-150-white.png */; };
 		308D9B9717CBF7CB00951708 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83ED17A9F2F700B6BCE2 /* UIKit.framework */; };
 		308D9B9A17CBFAE800951708 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 308D9B9917CBFAE800951708 /* User.m */; };
 		30AA83EA17A9F2F700B6BCE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AA83E917A9F2F700B6BCE2 /* Foundation.framework */; };
@@ -119,6 +131,18 @@
 		3065242C17D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "url-s-yahoo-main-cafeteria.jpg"; sourceTree = "<group>"; };
 		3065243317D0146A001D9D7D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3065243517D014A9001D9D7D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		307B609A17D5A80E0008EE87 /* round-rating0-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating0-150-white.png"; sourceTree = "<group>"; };
+		307B609B17D5A8E50008EE87 /* round-rating1-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating1-150-white.png"; sourceTree = "<group>"; };
+		307B609C17D5A8E50008EE87 /* round-rating15-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating15-150-white.png"; sourceTree = "<group>"; };
+		307B609D17D5A8E50008EE87 /* round-rating2-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating2-150-white.png"; sourceTree = "<group>"; };
+		307B609E17D5A8E50008EE87 /* round-rating25-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating25-150-white.png"; sourceTree = "<group>"; };
+		307B609F17D5A8E50008EE87 /* round-rating3-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating3-150-white.png"; sourceTree = "<group>"; };
+		307B60A017D5A8E50008EE87 /* round-rating35-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating35-150-white.png"; sourceTree = "<group>"; };
+		307B60A117D5A8E50008EE87 /* round-rating4-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating4-150-white.png"; sourceTree = "<group>"; };
+		307B60A217D5A8E50008EE87 /* round-rating45-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating45-150-white.png"; sourceTree = "<group>"; };
+		307B60A317D5A8E50008EE87 /* round-rating5-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating5-150-white.png"; sourceTree = "<group>"; };
+		307B60A417D5A8E50008EE87 /* round-rating5-special-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating5-special-150-white.png"; sourceTree = "<group>"; };
+		307B60A517D5A8E50008EE87 /* round-rating05-150-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "round-rating05-150-white.png"; sourceTree = "<group>"; };
 		308D9B9817CBFAE800951708 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		308D9B9917CBFAE800951708 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		30AA83E617A9F2F700B6BCE2 /* Cafes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -408,6 +432,18 @@
 		30F15DFA17D1731E006C60B8 /* Rating Assets */ = {
 			isa = PBXGroup;
 			children = (
+				307B609B17D5A8E50008EE87 /* round-rating1-150-white.png */,
+				307B609C17D5A8E50008EE87 /* round-rating15-150-white.png */,
+				307B609D17D5A8E50008EE87 /* round-rating2-150-white.png */,
+				307B609E17D5A8E50008EE87 /* round-rating25-150-white.png */,
+				307B609F17D5A8E50008EE87 /* round-rating3-150-white.png */,
+				307B60A017D5A8E50008EE87 /* round-rating35-150-white.png */,
+				307B60A117D5A8E50008EE87 /* round-rating4-150-white.png */,
+				307B60A217D5A8E50008EE87 /* round-rating45-150-white.png */,
+				307B60A317D5A8E50008EE87 /* round-rating5-150-white.png */,
+				307B60A417D5A8E50008EE87 /* round-rating5-special-150-white.png */,
+				307B60A517D5A8E50008EE87 /* round-rating05-150-white.png */,
+				307B609A17D5A80E0008EE87 /* round-rating0-150-white.png */,
 				30F15DFB17D1731E006C60B8 /* round-rating0-150.png */,
 				30F15DFC17D1731E006C60B8 /* round-rating05-150.png */,
 				30F15DFD17D1731E006C60B8 /* round-rating1-150.png */,
@@ -531,8 +567,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				30F15E1217D1731E006C60B8 /* round-rating5-special-150.png in Resources */,
+				307B60A917D5A8E50008EE87 /* round-rating25-150-white.png in Resources */,
+				307B60AB17D5A8E50008EE87 /* round-rating35-150-white.png in Resources */,
 				30AA83F617A9F2F700B6BCE2 /* InfoPlist.strings in Resources */,
 				30F15E0F17D1731E006C60B8 /* round-rating4-150.png in Resources */,
+				307B60AE17D5A8E50008EE87 /* round-rating5-150-white.png in Resources */,
 				3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */,
 				30BFEA4017D142BE00904F17 /* launcher-v2-1136.png in Resources */,
 				30F15E1117D1731E006C60B8 /* round-rating5-150.png in Resources */,
@@ -541,11 +580,14 @@
 				30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */,
 				30BFEA4D17D143FA00904F17 /* background-main-v2-dark-iphone4-blur.png in Resources */,
 				3065243117D00839001D9D7D /* peppers-clear.png in Resources */,
+				307B60AA17D5A8E50008EE87 /* round-rating3-150-white.png in Resources */,
 				30FBDAE917D0F0D300872628 /* background-main-iphone4.png in Resources */,
 				30BFEA3F17D142BE00904F17 /* launcher-v2-960.png in Resources */,
 				30FBDAE717D0EE4100872628 /* background-main.png in Resources */,
 				30BFEA4E17D143FA00904F17 /* background-main-v2-dark-iphone5-blur.png in Resources */,
+				307B60B017D5A8E50008EE87 /* round-rating05-150-white.png in Resources */,
 				30DFA91017B1BE4C00B729FB /* AddRatingViewController.xib in Resources */,
+				307B60AC17D5A8E50008EE87 /* round-rating4-150-white.png in Resources */,
 				30BFEA5017D143FA00904F17 /* background-main-v2-dark-iphone4.png in Resources */,
 				30BFEA4417D142BE00904F17 /* icon-v2-120.png in Resources */,
 				30BFEA4517D142BE00904F17 /* icon-v2-114.png in Resources */,
@@ -558,14 +600,17 @@
 				3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */,
 				30BFEA4617D142BE00904F17 /* icon-v2-1024.png in Resources */,
 				30F15E0D17D1731E006C60B8 /* round-rating3-150.png in Resources */,
+				307B60A817D5A8E50008EE87 /* round-rating2-150-white.png in Resources */,
 				3065242F17D00839001D9D7D /* bldg-g-clear-tall.png in Resources */,
 				3065242D17D00839001D9D7D /* bldg-e-clear-tall.png in Resources */,
+				307B60B117D5A8EC0008EE87 /* round-rating0-150-white.png in Resources */,
 				30BFEA4217D142BE00904F17 /* icon-v2-58.png in Resources */,
 				30BFEA4317D142BE00904F17 /* icon-v2-80.png in Resources */,
 				3060205D17B18C3E003F4B54 /* MenuItemViewController.xib in Resources */,
 				30F15E0717D1731E006C60B8 /* round-rating0-150.png in Resources */,
 				30BFEA5317D1476000904F17 /* background-main-v2-dark-iphone4-548.png in Resources */,
 				30F15E0C17D1731E006C60B8 /* round-rating25-150.png in Resources */,
+				307B60AF17D5A8E50008EE87 /* round-rating5-special-150-white.png in Resources */,
 				30BFEA4F17D143FA00904F17 /* background-main-v2-dark-iphone5.png in Resources */,
 				30F15E0817D1731E006C60B8 /* round-rating05-150.png in Resources */,
 				30BFEA5417D1476000904F17 /* background-main-v2-dark-iphone4-568.png in Resources */,
@@ -575,6 +620,9 @@
 				301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */,
 				30F15E0A17D1731E006C60B8 /* round-rating15-150.png in Resources */,
 				301E648917B1BB5F00FDCC67 /* MenuItemCell.xib in Resources */,
+				307B60A617D5A8E50008EE87 /* round-rating1-150-white.png in Resources */,
+				307B60AD17D5A8E50008EE87 /* round-rating45-150-white.png in Resources */,
+				307B60A717D5A8E50008EE87 /* round-rating15-150-white.png in Resources */,
 				30F15E0B17D1731E006C60B8 /* round-rating2-150.png in Resources */,
 				30BFEA4817D1434D00904F17 /* icon-v2-57.png in Resources */,
 				30BFEA4117D142BE00904F17 /* icon-v2-29.png in Resources */,

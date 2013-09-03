@@ -36,7 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 
-    self.title = [self.menuItem.title capitalizedString];
+    //self.title = [self.menuItem.title capitalizedString];
     self.menuItemDescription.numberOfLines = 0;
     [self.menuItemDescription sizeToFit];
     
