@@ -18,7 +18,7 @@
                         <rect key="frame" x="255" y="0.0" width="65" height="91"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="5stars.png" translatesAutoresizingMaskIntoConstraints="NO" id="11">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="round-rating2-150.png" translatesAutoresizingMaskIntoConstraints="NO" id="11">
                                 <rect key="frame" x="13" y="26" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -77,6 +77,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="5stars.png" width="84.720001220703125" height="84.720001220703125"/>
+        <image name="round-rating2-150.png" width="36" height="36"/>
     </resources>
 </document>

@@ -69,6 +69,7 @@
 		30BFEA5417D1476000904F17 /* background-main-v2-dark-iphone4-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5217D1476000904F17 /* background-main-v2-dark-iphone4-568.png */; };
 		30BFEA5617D14A3B00904F17 /* background-purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5517D14A3B00904F17 /* background-purple.png */; };
 		30C8201E17D65460004C64C9 /* 3-5-stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C8201D17D65460004C64C9 /* 3-5-stars.png */; };
+		30C8202017D65A5B004C64C9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C8201F17D65A5B004C64C9 /* MessageUI.framework */; };
 		30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */; };
 		30DFA90017B1BD3D00B729FB /* BuildingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */; };
 		30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA8FF17B1BD3D00B729FB /* BuildingListViewController.xib */; };
@@ -181,6 +182,7 @@
 		30BFEA5217D1476000904F17 /* background-main-v2-dark-iphone4-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-main-v2-dark-iphone4-568.png"; sourceTree = "<group>"; };
 		30BFEA5517D14A3B00904F17 /* background-purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background-purple.png"; sourceTree = "<group>"; };
 		30C8201D17D65460004C64C9 /* 3-5-stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "3-5-stars.png"; sourceTree = "<group>"; };
+		30C8201F17D65A5B004C64C9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		30DFA8FA17B1BD0700B729FB /* ReviewCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCommentCell.h; sourceTree = "<group>"; };
 		30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCommentCell.m; sourceTree = "<group>"; };
 		30DFA8FD17B1BD3D00B729FB /* BuildingListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingListViewController.h; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C8202017D65A5B004C64C9 /* MessageUI.framework in Frameworks */,
 				30FBDAE517D0E60100872628 /* Security.framework in Frameworks */,
 				3065243617D014A9001D9D7D /* MobileCoreServices.framework in Frameworks */,
 				3065243417D0146A001D9D7D /* SystemConfiguration.framework in Frameworks */,
@@ -368,6 +371,7 @@
 		30AA83E817A9F2F700B6BCE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30C8201F17D65A5B004C64C9 /* MessageUI.framework */,
 				30FBDAE417D0E60100872628 /* Security.framework */,
 				3065243517D014A9001D9D7D /* MobileCoreServices.framework */,
 				3065243317D0146A001D9D7D /* SystemConfiguration.framework */,
