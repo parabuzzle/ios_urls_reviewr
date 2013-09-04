@@ -52,6 +52,14 @@
     return [NSString stringWithFormat:@"round-rating%@-150.png", starRating];
 }
 
+- (NSString *)ratingImageNameinWhite {
+    
+    NSString *starRating = [self stringFormattedRating];
+    starRating = [starRating stringByReplacingOccurrencesOfString:@"." withString:@""];
+    
+    return [NSString stringWithFormat:@"round-rating%@-150-white.png", starRating];
+}
+
 - (NSString *)stringFormattedRating {
     float floatValue = round(self.rating.floatValue * 2.0f) / 2;
     NSString *starRating = [NSString stringWithFormat:@"%.1f", floatValue];

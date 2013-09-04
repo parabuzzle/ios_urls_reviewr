@@ -115,9 +115,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    MenuItemCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    MenuItemCell *cell = (MenuItemCell *) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[NSBundle mainBundle] loadNibNamed:@"MenuItemCell" owner:self options:nil];
+        cell = (MenuItemCell *) [[NSBundle mainBundle] loadNibNamed:@"MenuItemCell" owner:self options:nil];
         cell = _menuItemCell;
     }
     
@@ -136,8 +136,8 @@
     cell.reviewsLabel.textColor = [UIColor whiteColor];
     cell.reviewsLabel.font = [UIFont boldSystemFontOfSize:12];
     cell.reviewsLabel.text = [NSString stringWithFormat:@"%d reviews", selectedMenuItem.reviewers];
-    cell.ratingImage.image = [UIImage imageNamed:[selectedMenuItem ratingImageName]];
-    cell.ratingLabel.textColor = [UIColor blackColor];
+    cell.ratingImage.image = [UIImage imageNamed:[selectedMenuItem ratingImageNameinWhite]];
+    cell.ratingLabel.textColor = [UIColor whiteColor];
     cell.ratingLabel.font = [UIFont boldSystemFontOfSize:12];
     cell.ratingLabel.text = [NSString stringWithFormat:@"%@/5", [selectedMenuItem stringFormattedRating]];
     cell.shouldIndentWhileEditing = YES;
