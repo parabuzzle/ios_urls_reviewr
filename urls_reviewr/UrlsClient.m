@@ -110,7 +110,7 @@
     NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"userid"], @"user_id", rating, @"rating", comment.text, @"comment", nil];
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self postPath:[NSString stringWithFormat:@"/menu_items/%@/rate.json", comment.menuItemId] parameters:parameters success:success failure:failure];
+    [self postPath:[NSString stringWithFormat:@"menu_items/%@/rate.json", comment.menuItemId] parameters:parameters success:success failure:failure];
     
 }
 

@@ -35,7 +35,8 @@
     menuItem.seafoodWatch = [[JsonDictionary objectForKey:@"seafood_watch"] boolValue];
     menuItem.createdAt = [JsonDictionary objectForKey:@"created_at"];
     menuItem.updatedAt = [JsonDictionary objectForKey:@"updated_at"];
-    
+    menuItem.reviewers = [[JsonDictionary objectForKey:@"reviewers"] integerValue];
+
     if([menuItem.description isKindOfClass:[NSNull class]]){
         menuItem.description = @"";
     }
