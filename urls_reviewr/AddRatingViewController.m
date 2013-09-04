@@ -41,11 +41,12 @@
     Comment *comment = [[Comment alloc] init];
     comment.text = self.textView.text;
     comment.menuItemId = [NSString stringWithFormat:@"%d", self.menuItem.menuItemId];
-    NSString *rating = @"5";
+    NSString *rating = @"4";
     
     NSLog(@"Before calling post");
     [[UrlsClient instance] postCommentsForMenuItem:comment withRating:rating success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"Posting menu item");
+        [NSLog(@"Posting menu item");
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

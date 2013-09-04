@@ -151,8 +151,10 @@
     }
     
     // Configure the cell...
+    cell.textLabel.numberOfLines = 0;
     cell.textLabel.text = [[self.menuItem.commentsList objectAtIndex:indexPath.row] text];
     cell.shouldIndentWhileEditing = YES;
+    [cell.textLabel sizeToFit];
 //    cell.backgroundColor = [UIColor clearColor];
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.font = [UIFont boldSystemFontOfSize:18];

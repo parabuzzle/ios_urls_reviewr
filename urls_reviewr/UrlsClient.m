@@ -107,7 +107,7 @@
 - (void)postCommentsForMenuItem:(Comment *)comment withRating:(NSString *)rating success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"userid"], @"user_id", rating, @"rating", comment.text, @"comment", nil];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"userid"], @"user_id", rating, @"rating", comment.text, @"comment", [defaults objectForKey:@"token"], @"token", nil];
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self postPath:[NSString stringWithFormat:@"menu_items/%@/rate.json", comment.menuItemId] parameters:parameters success:success failure:failure];
