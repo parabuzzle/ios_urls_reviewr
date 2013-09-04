@@ -31,5 +31,6 @@
 + (MenuItem *)fromJSON:(NSDictionary *)JsonDictionary;
 - (NSString *)ratingImageName;
 - (NSString *)stringFormattedRating;
+- (void)loadComments:(NSArray *)Json;
 
 @end

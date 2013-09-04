@@ -7,12 +7,23 @@
 //
 
 #import "AddRatingViewController.h"
+#import "UrlsClient.h"
+#import "MenuItem.h"
 
 @interface AddRatingViewController ()
+
+@property (nonatomic, strong) MenuItem *menuItem;
 
 @end
 
 @implementation AddRatingViewController
+
+- (id)initWithMenuItem:(MenuItem *)menuItem {
+    self = [super init];
+    self.menuItem = menuItem;
+    
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +38,12 @@
 }
 - (IBAction)onSaveButton:(id)sender {
     // Do stuff
+    [[UrlsClient instance] postCommentsForMenuItem:self.menuItem success:^(AFHTTPRequestOperation *operation, id response) {
+        NSLog(@"Posting menu item");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);
+    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad

@@ -10,6 +10,7 @@
 #import "AFHTTPRequestOperation.h"
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
+#import "MenuItem.h"
 
 @interface UrlsClient : AFHTTPClient
 
@@ -36,9 +37,9 @@
 - (void)menuByDate:(NSString *) date success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 #pragma mark - GET Comments API
-- (void)getCommentsWithMenuItemId:(NSInteger *)menuItemId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void)getCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 #pragma mark - POST Comments API
-- (void)postCommentsWithMenuItemId:(NSInteger *)menuItemId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void)postCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

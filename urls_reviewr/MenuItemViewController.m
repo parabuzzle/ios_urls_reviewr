@@ -10,6 +10,7 @@
 #import "MenuItem.h"
 #import "UrlsClient.h"
 #import "AddRatingViewController.h"
+#import "Comment.h"
 
 @interface MenuItemViewController ()
 
@@ -74,9 +75,14 @@
     self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
     self.ratingsImageView.image = [UIImage imageNamed:self.menuItem.ratingImageName];
     
-    [[UrlsClient instance] getCommentsWithMenuItemId:self.menuItem.menuItemId success:^(AFHTTPRequestOperation *operation, id response) {
+    [[UrlsClient instance] getCommentsForMenuItem:self.menuItem success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Successfully queried comments for menu item");
-        //NSLog(response);
+        [self.menuItem loadComments:response];
+        NSLog([NSString stringWithFormat:@"Menu Item Comment: %@", [[self.menuItem.commentsList objectAtIndex:0]text]]);
+        [self.commentsListView reloadData];
+        NSLog([NSString stringWithFormat:@"comments count: %d", self.menuItem.commentsList.count]);
+        
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed to GET comments for menu item");
         //NSLog(error);
@@ -85,7 +91,7 @@
 
 - (IBAction)addRating {
     // Add rating and comment modal
-    AddRatingViewController *ratingView = [[AddRatingViewController alloc] init];
+    AddRatingViewController *ratingView = [[AddRatingViewController alloc] initWithMenuItem:self.menuItem];
     [self presentViewController:ratingView animated:YES completion:NULL];
     
 }
@@ -125,6 +131,41 @@
     }
     // Remove the mail view
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return self.menuItem.commentsList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    // Configure the cell...
+    NSLog([NSString stringWithFormat:@"Menu Item Comment: %@", [[self.menuItem.commentsList objectAtIndex:indexPath.row] text]]);
+    cell.textLabel.text = [[self.menuItem.commentsList objectAtIndex:indexPath.row] text];
+    cell.shouldIndentWhileEditing = YES;
+//    cell.backgroundColor = [UIColor clearColor];
+//    cell.textLabel.textColor = [UIColor whiteColor];
+//    cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
+//    UIView *selectedBackgroundViewForCell = [UIView new];
+//    [selectedBackgroundViewForCell setBackgroundColor:[UIColor purpleColor]];
+//    cell.selectedBackgroundView = selectedBackgroundViewForCell;
+    return cell;
 }
 
 @end

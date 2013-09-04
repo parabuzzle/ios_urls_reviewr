@@ -8,6 +8,7 @@
 
 #import "UrlsClient.h"
 #import "AFNetworking.h"
+#import "MenuItem.h"
 
 #define BACKEND_BASE_URL [NSURL URLWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/"]
 
@@ -45,7 +46,6 @@
              failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    //[self getPath:@"today.json" parameters:nil success:success failure:failure];
     [self getPath:@"today.json" parameters:nil success:success failure:failure];
     
 }
@@ -85,7 +85,6 @@
 - (void)todaysMenu:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure
 {
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    //[self getPath:@"today.json" parameters:nil success:success failure:failure];
     [self getPath:@"today.json" parameters:nil success:success failure:failure];
 }
 
@@ -97,16 +96,22 @@
 
 
 #pragma mark - GET Comments API
-- (void)getCommentsWithMenuItemId:(NSInteger *)menuItemId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
+- (void)getCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self getPath:[NSString stringWithFormat:@"menu_items/%d/comments.json", menuItemId] parameters:nil success:success failure:failure];
-
+    [self getPath:[NSString stringWithFormat:@"menu_items/%d/comments.json", menuItem.menuItemId] parameters:nil success:success failure:failure];
+    
 }
 
 #pragma mark - POST Comments API
-- (void)postCommentsWithMenuItemId:(NSInteger *)menuItemId success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
+- (void)postCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
+
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSLog([NSString stringWithFormat:@"User id: %@", [defaults objectForKey:@"userid"]]);
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"userid"], @"user_id", @"3", @"rating", @"blah", @"comment", nil];
+    
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self postPath:[NSString stringWithFormat:@"menu_items/%d/comments.json", menuItemId] parameters:nil success:success failure:failure];
+    [self postPath:[NSString stringWithFormat:@"/menu_items/%d/rate.json", menuItem.menuItemId] parameters:parameters success:success failure:failure];
     
 }
 

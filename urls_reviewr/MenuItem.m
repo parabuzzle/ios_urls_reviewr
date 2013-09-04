@@ -7,6 +7,7 @@
 //
 
 #import "MenuItem.h"
+#import "Comment.h"
 
 @implementation MenuItem
 
@@ -60,6 +61,16 @@
     }
     
     return starRating;
+}
+
+- (void)loadComments:(NSArray *)Json {
+    NSLog([NSString stringWithFormat:@"\n\n\nJSON: \n%@", Json]);
+    self.commentsList = [[NSMutableArray alloc] init];
+    
+    for (int i=0; i<Json.count; i++) {
+        [self.commentsList addObject:[[Comment alloc] initWithDictionary:[Json objectAtIndex:i]]];
+    }
+    
 }
 
 @end

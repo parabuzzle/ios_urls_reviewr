@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuItem.h"
 
 @interface AddRatingViewController : UIViewController
+
+- (id)initWithMenuItem:(MenuItem *)menuItem;
 
 @end
