@@ -11,6 +11,7 @@
 #import "AFHTTPClient.h"
 #import "AFJSONRequestOperation.h"
 #import "MenuItem.h"
+#import "Comment.h"
 
 @interface UrlsClient : AFHTTPClient
 
@@ -40,6 +41,6 @@
 - (void)getCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 #pragma mark - POST Comments API
-- (void)postCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+- (void)postCommentsForMenuItem:(Comment *)comment withRating:(NSString *)rating success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
 
 @end

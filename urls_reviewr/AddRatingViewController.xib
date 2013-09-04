@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddRatingViewController">
             <connections>
+                <outlet property="textView" destination="2Ch-WV-Ukc" id="eRy-0V-Ftf"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

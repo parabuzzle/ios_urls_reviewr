@@ -11,7 +11,7 @@
 #import "MenuItemCell.h"
 #import <MessageUI/MessageUI.h>
 
-@interface MenuItemViewController : UIViewController <MFMailComposeViewControllerDelegate>
+@interface MenuItemViewController : UIViewController <MFMailComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, strong) MenuItem *menuItem;

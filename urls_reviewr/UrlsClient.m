@@ -9,6 +9,7 @@
 #import "UrlsClient.h"
 #import "AFNetworking.h"
 #import "MenuItem.h"
+#import "Comment.h"
 
 #define BACKEND_BASE_URL [NSURL URLWithString:@"http://api.reviewr.mail.vip.gq1.yahoo.net/"]
 
@@ -103,15 +104,13 @@
 }
 
 #pragma mark - POST Comments API
-- (void)postCommentsForMenuItem:(MenuItem *)menuItem success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
-
+- (void)postCommentsForMenuItem:(Comment *)comment withRating:(NSString *)rating success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure{
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog([NSString stringWithFormat:@"User id: %@", [defaults objectForKey:@"userid"]]);
-    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"userid"], @"user_id", @"3", @"rating", @"blah", @"comment", nil];
+    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:[defaults objectForKey:@"userid"], @"user_id", rating, @"rating", comment.text, @"comment", nil];
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [self postPath:[NSString stringWithFormat:@"/menu_items/%d/rate.json", menuItem.menuItemId] parameters:parameters success:success failure:failure];
+    [self postPath:[NSString stringWithFormat:@"/menu_items/%@/rate.json", comment.menuItemId] parameters:parameters success:success failure:failure];
     
 }
 

@@ -37,8 +37,14 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)onSaveButton:(id)sender {
-    // Do stuff
-    [[UrlsClient instance] postCommentsForMenuItem:self.menuItem success:^(AFHTTPRequestOperation *operation, id response) {
+    
+    Comment *comment = [[Comment alloc] init];
+    comment.text = self.textView.text;
+    comment.menuItemId = [NSString stringWithFormat:@"%d", self.menuItem.menuItemId];
+    NSString *rating = @"5";
+    
+    NSLog(@"Before calling post");
+    [[UrlsClient instance] postCommentsForMenuItem:comment withRating:rating success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Posting menu item");
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);

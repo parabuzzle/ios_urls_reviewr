@@ -33,8 +33,8 @@
     menuItem.glutenFree = [[JsonDictionary objectForKey:@"gluten_free"] boolValue];
     menuItem.farmToFork = [[JsonDictionary objectForKey:@"farm_to_fork"] boolValue];
     menuItem.seafoodWatch = [[JsonDictionary objectForKey:@"seafood_watch"] boolValue];
-    menuItem.createdAt = [JsonDictionary objectForKey:@"createdAt"];
-    menuItem.updatedAt = [JsonDictionary objectForKey:@"updatedAt"];
+    menuItem.createdAt = [JsonDictionary objectForKey:@"created_at"];
+    menuItem.updatedAt = [JsonDictionary objectForKey:@"updated_at"];
     
     if([menuItem.description isKindOfClass:[NSNull class]]){
         menuItem.description = @"";
@@ -72,7 +72,6 @@
 }
 
 - (void)loadComments:(NSArray *)Json {
-    NSLog([NSString stringWithFormat:@"\n\n\nJSON: \n%@", Json]);
     self.commentsList = [[NSMutableArray alloc] init];
     
     for (int i=0; i<Json.count; i++) {

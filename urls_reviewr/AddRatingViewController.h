@@ -11,6 +11,8 @@
 
 @interface AddRatingViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UITextView *textView;
+
 - (id)initWithMenuItem:(MenuItem *)menuItem;
 
 @end

@@ -43,14 +43,13 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addRating)];
     UIBarButtonItem *shareButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareItem)];
     self.navigationItem.rightBarButtonItems = @[addButton, shareButton];
-
-    //self.title = [self.menuItem.title capitalizedString];
     self.menuItemDescription.numberOfLines = 0;
     [self.menuItemDescription sizeToFit];
     
-    
-    NSLog([NSString stringWithFormat:@"Menu object: %@", self.title]);
-    
+    self.commentsListView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    self.commentsListView.delegate = self;
+    self.commentsListView.dataSource = self;
+    [self.commentsListView reloadData];
     [self loadMenuItemData];
 
 }
@@ -78,14 +77,10 @@
     [[UrlsClient instance] getCommentsForMenuItem:self.menuItem success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Successfully queried comments for menu item");
         [self.menuItem loadComments:response];
-        NSLog([NSString stringWithFormat:@"Menu Item Comment: %@", [[self.menuItem.commentsList objectAtIndex:0]text]]);
         [self.commentsListView reloadData];
-        NSLog([NSString stringWithFormat:@"comments count: %d", self.menuItem.commentsList.count]);
-        
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed to GET comments for menu item");
-        //NSLog(error);
     }];
 }
 
@@ -156,7 +151,6 @@
     }
     
     // Configure the cell...
-    NSLog([NSString stringWithFormat:@"Menu Item Comment: %@", [[self.menuItem.commentsList objectAtIndex:indexPath.row] text]]);
     cell.textLabel.text = [[self.menuItem.commentsList objectAtIndex:indexPath.row] text];
     cell.shouldIndentWhileEditing = YES;
 //    cell.backgroundColor = [UIColor clearColor];
