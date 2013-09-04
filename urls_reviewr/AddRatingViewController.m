@@ -45,7 +45,7 @@
     
     NSLog(@"Before calling post");
     [[UrlsClient instance] postCommentsForMenuItem:comment withRating:rating success:^(AFHTTPRequestOperation *operation, id response) {
-        [NSLog(@"Posting menu item");
+        NSLog(@"Posting menu item");
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);
