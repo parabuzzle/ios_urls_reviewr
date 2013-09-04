@@ -48,6 +48,8 @@
         NSLog(@"Posting menu item");
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
