@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddRatingViewController">
             <connections>
+                <outlet property="rateView" destination="dqZ-ae-4R1" id="B4H-G0-7iG"/>
                 <outlet property="textView" destination="2Ch-WV-Ukc" id="eRy-0V-Ftf"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -61,17 +62,15 @@
                         <action selector="onCancelButton:" destination="-1" eventType="touchUpInside" id="vMb-6f-jib"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3-5-stars.png" translatesAutoresizingMaskIntoConstraints="NO" id="g2M-1z-L1B">
-                    <rect key="frame" x="40" y="61" width="245" height="53"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqZ-ae-4R1" customClass="RateView">
+                    <rect key="frame" x="40" y="64" width="245" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
-    <resources>
-        <image name="3-5-stars.png" width="1600" height="373"/>
-    </resources>
 </document>

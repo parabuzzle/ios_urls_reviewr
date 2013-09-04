@@ -68,7 +68,6 @@
 		30BFEA5317D1476000904F17 /* background-main-v2-dark-iphone4-548.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5117D1476000904F17 /* background-main-v2-dark-iphone4-548.png */; };
 		30BFEA5417D1476000904F17 /* background-main-v2-dark-iphone4-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5217D1476000904F17 /* background-main-v2-dark-iphone4-568.png */; };
 		30BFEA5617D14A3B00904F17 /* background-purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 30BFEA5517D14A3B00904F17 /* background-purple.png */; };
-		30C8201E17D65460004C64C9 /* 3-5-stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 30C8201D17D65460004C64C9 /* 3-5-stars.png */; };
 		30C8202017D65A5B004C64C9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30C8201F17D65A5B004C64C9 /* MessageUI.framework */; };
 		30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FB17B1BD0700B729FB /* ReviewCommentCell.m */; };
 		30DFA90017B1BD3D00B729FB /* BuildingListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30DFA8FE17B1BD3D00B729FB /* BuildingListViewController.m */; };
@@ -97,6 +96,10 @@
 		3B9707DA17D3CCB0006FE6E0 /* MenuItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9707D917D3CCB0006FE6E0 /* MenuItemTest.m */; };
 		3B9707DC17D6B305006FE6E0 /* CommentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9707DB17D6B305006FE6E0 /* CommentTest.m */; };
 		3B9707DF17D6B360006FE6E0 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9707DE17D6B360006FE6E0 /* Comment.m */; };
+		3B9707E317D7F264006FE6E0 /* RateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B9707E217D7F264006FE6E0 /* RateView.m */; };
+		3B9707E717D7F862006FE6E0 /* kermit_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9707E417D7F862006FE6E0 /* kermit_empty.png */; };
+		3B9707E817D7F862006FE6E0 /* kermit_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9707E517D7F862006FE6E0 /* kermit_full.png */; };
+		3B9707E917D7F862006FE6E0 /* kermit_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B9707E617D7F862006FE6E0 /* kermit_half.png */; };
 		3BAFE1AD17C319280025C584 /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1AC17C319280025C584 /* MenuItem.m */; };
 		3BAFE1B517C342220025C584 /* UrlsClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B417C342220025C584 /* UrlsClient.m */; };
 		3BAFE1B917C3EBC90025C584 /* RestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BAFE1B817C3EBC90025C584 /* RestObject.m */; };
@@ -219,6 +222,11 @@
 		3B9707DB17D6B305006FE6E0 /* CommentTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTest.m; sourceTree = "<group>"; };
 		3B9707DD17D6B360006FE6E0 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comment.h; sourceTree = "<group>"; };
 		3B9707DE17D6B360006FE6E0 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comment.m; sourceTree = "<group>"; };
+		3B9707E117D7F264006FE6E0 /* RateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateView.h; sourceTree = "<group>"; };
+		3B9707E217D7F264006FE6E0 /* RateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateView.m; sourceTree = "<group>"; };
+		3B9707E417D7F862006FE6E0 /* kermit_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_empty.png; sourceTree = "<group>"; };
+		3B9707E517D7F862006FE6E0 /* kermit_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_full.png; sourceTree = "<group>"; };
+		3B9707E617D7F862006FE6E0 /* kermit_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kermit_half.png; sourceTree = "<group>"; };
 		3BAFE1AB17C319280025C584 /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuItem.h; sourceTree = "<group>"; };
 		3BAFE1AC17C319280025C584 /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuItem.m; sourceTree = "<group>"; };
 		3BAFE1B317C342220025C584 /* UrlsClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlsClient.h; sourceTree = "<group>"; };
@@ -393,6 +401,7 @@
 		30AA83F117A9F2F700B6BCE2 /* urls_reviewr */ = {
 			isa = PBXGroup;
 			children = (
+				3B9707E017D7F1DC006FE6E0 /* Custom Widgets */,
 				3BAFE1B217C3410A0025C584 /* API */,
 				3BAFE1B617C3EB000025C584 /* Models */,
 				303E976217CCF4C900D63688 /* View Controllers */,
@@ -475,6 +484,18 @@
 				30F15E0617D1731E006C60B8 /* round-rating5-special-150.png */,
 			);
 			path = "Rating Assets";
+			sourceTree = "<group>";
+		};
+		3B9707E017D7F1DC006FE6E0 /* Custom Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				3B9707E417D7F862006FE6E0 /* kermit_empty.png */,
+				3B9707E517D7F862006FE6E0 /* kermit_full.png */,
+				3B9707E617D7F862006FE6E0 /* kermit_half.png */,
+				3B9707E117D7F264006FE6E0 /* RateView.h */,
+				3B9707E217D7F264006FE6E0 /* RateView.m */,
+			);
+			name = "Custom Widgets";
 			sourceTree = "<group>";
 		};
 		3BAFE1B217C3410A0025C584 /* API */ = {
@@ -591,6 +612,7 @@
 				30AA83F617A9F2F700B6BCE2 /* InfoPlist.strings in Resources */,
 				30F15E0F17D1731E006C60B8 /* round-rating4-150.png in Resources */,
 				307B60AE17D5A8E50008EE87 /* round-rating5-150-white.png in Resources */,
+				3B9707E817D7F862006FE6E0 /* kermit_full.png in Resources */,
 				3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */,
 				30BFEA4017D142BE00904F17 /* launcher-v2-1136.png in Resources */,
 				30F15E1117D1731E006C60B8 /* round-rating5-150.png in Resources */,
@@ -598,6 +620,7 @@
 				30F15E1017D1731E006C60B8 /* round-rating45-150.png in Resources */,
 				30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */,
 				30BFEA4D17D143FA00904F17 /* background-main-v2-dark-iphone4-blur.png in Resources */,
+				3B9707E917D7F862006FE6E0 /* kermit_half.png in Resources */,
 				3065243117D00839001D9D7D /* peppers-clear.png in Resources */,
 				307B60AA17D5A8E50008EE87 /* round-rating3-150-white.png in Resources */,
 				30FBDAE917D0F0D300872628 /* background-main-iphone4.png in Resources */,
@@ -632,6 +655,7 @@
 				30BFEA4F17D143FA00904F17 /* background-main-v2-dark-iphone5.png in Resources */,
 				30F15E0817D1731E006C60B8 /* round-rating05-150.png in Resources */,
 				30BFEA5417D1476000904F17 /* background-main-v2-dark-iphone4-568.png in Resources */,
+				3B9707E717D7F862006FE6E0 /* kermit_empty.png in Resources */,
 				30BFEA5617D14A3B00904F17 /* background-purple.png in Resources */,
 				3065242E17D00839001D9D7D /* bldg-f-clear-tall.png in Resources */,
 				30AA840117A9F2F700B6BCE2 /* Images.xcassets in Resources */,
@@ -703,6 +727,7 @@
 				30DFA8FC17B1BD0700B729FB /* ReviewCommentCell.m in Sources */,
 				30DFA90517B1BD5900B729FB /* MenuListViewController.m in Sources */,
 				3BAFE1BC17C3ED6E0025C584 /* Building.m in Sources */,
+				3B9707E317D7F264006FE6E0 /* RateView.m in Sources */,
 				3B9707DF17D6B360006FE6E0 /* Comment.m in Sources */,
 				3BAFE1BF17CC5B930025C584 /* Menu.m in Sources */,
 				30AA83FC17A9F2F700B6BCE2 /* AppDelegate.m in Sources */,

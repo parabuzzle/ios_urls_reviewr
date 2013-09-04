@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "MenuItem.h"
+#import "RateView.h"
 
-@interface AddRatingViewController : UIViewController
+@interface AddRatingViewController : UIViewController<RateViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UITextView *textView;
+@property (nonatomic, weak) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet RateView *rateView;
 
 - (id)initWithMenuItem:(MenuItem *)menuItem;
 
