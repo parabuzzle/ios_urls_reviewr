@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "RestObject.h"
 #import "Menu.h"
+#import "Comment.h"
 
 @interface MenuItem : RestObject
 
@@ -33,5 +34,6 @@
 - (NSString *)ratingImageNameinWhite;
 - (NSString *)stringFormattedRating;
 - (void)loadComments:(NSArray *)Json;
+- (void)addComment:(Comment *)comment;
 
 @end

@@ -25,7 +25,6 @@
 - (IBAction)addRating;
 
 - (id)initWithName:(MenuItem *)theMenuItem;
-
-
+- (void)reloadUI;
 
 @end

@@ -78,7 +78,10 @@
     for (int i=0; i<Json.count; i++) {
         [self.commentsList addObject:[[Comment alloc] initWithDictionary:[Json objectAtIndex:i]]];
     }
-    
+}
+
+- (void)addComment:(Comment *)comment {
+    [self.commentsList addObject:comment];
 }
 
 @end

@@ -86,7 +86,7 @@
 
 - (IBAction)addRating {
     // Add rating and comment modal
-    AddRatingViewController *ratingView = [[AddRatingViewController alloc] initWithMenuItem:self.menuItem];
+    AddRatingViewController *ratingView = [[AddRatingViewController alloc] initWithMenuItem:self.menuItem andController:self];
     [self presentViewController:ratingView animated:YES completion:NULL];
     
 }
@@ -162,6 +162,14 @@
 //    [selectedBackgroundViewForCell setBackgroundColor:[UIColor purpleColor]];
 //    cell.selectedBackgroundView = selectedBackgroundViewForCell;
     return cell;
+}
+
+- (void)reloadUI {
+    [self.commentsListView reloadData];
+    self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.stringFormattedRating];
+    self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
+    self.ratingsImageView.image = [UIImage imageNamed:self.menuItem.ratingImageName];
+    NSLog([NSString stringWithFormat:@"%@", self.menuItem.ratingImageName]);
 }
 
 @end
