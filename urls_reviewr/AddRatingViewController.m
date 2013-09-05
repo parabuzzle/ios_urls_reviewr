@@ -77,9 +77,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.rateView.notSelectedImage = [UIImage imageNamed:@"kermit_empty.png"];
-    self.rateView.halfSelectedImage = [UIImage imageNamed:@"kermit_half.png"];
-    self.rateView.fullSelectedImage = [UIImage imageNamed:@"kermit_full.png"];
+    self.rateView.notSelectedImage = [UIImage imageNamed:@"singlestar_empty.png"];
+    self.rateView.halfSelectedImage = [UIImage imageNamed:@"singlestar_half.png"];
+    self.rateView.fullSelectedImage = [UIImage imageNamed:@"singlestar_full.png"];
     self.rateView.rating = 0;
     self.rateView.editable = YES;
     self.rateView.maxRating = 5;

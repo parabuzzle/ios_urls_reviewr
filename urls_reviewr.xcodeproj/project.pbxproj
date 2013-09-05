@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		301E648717B1B8D700FDCC67 /* ReviewCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */; };
 		301E648917B1BB5F00FDCC67 /* MenuItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */; };
+		3030A8F517D827D30084A465 /* singlestar_full.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A8F217D827D30084A465 /* singlestar_full.png */; };
+		3030A8F617D827D30084A465 /* singlestar_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A8F317D827D30084A465 /* singlestar_empty.png */; };
+		3030A8F717D827D30084A465 /* singlestar_half.png in Resources */ = {isa = PBXBuildFile; fileRef = 3030A8F417D827D30084A465 /* singlestar_half.png */; };
 		3049EE0417D63429005A9918 /* AddRatingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30DFA90E17B1BE4C00B729FB /* AddRatingViewController.xib */; };
 		3060205717B18BFC003F4B54 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3060205517B18BFC003F4B54 /* MenuViewController.m */; };
 		3060205817B18BFC003F4B54 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3060205617B18BFC003F4B54 /* MenuViewController.xib */; };
@@ -121,6 +124,9 @@
 /* Begin PBXFileReference section */
 		301E648617B1B8D700FDCC67 /* ReviewCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCommentCell.xib; sourceTree = "<group>"; };
 		301E648817B1BB5E00FDCC67 /* MenuItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuItemCell.xib; sourceTree = "<group>"; };
+		3030A8F217D827D30084A465 /* singlestar_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singlestar_full.png; sourceTree = "<group>"; };
+		3030A8F317D827D30084A465 /* singlestar_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singlestar_empty.png; sourceTree = "<group>"; };
+		3030A8F417D827D30084A465 /* singlestar_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singlestar_half.png; sourceTree = "<group>"; };
 		3060205417B18BFC003F4B54 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		3060205517B18BFC003F4B54 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		3060205617B18BFC003F4B54 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
@@ -458,6 +464,9 @@
 		30F15DFA17D1731E006C60B8 /* Rating Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3030A8F217D827D30084A465 /* singlestar_full.png */,
+				3030A8F317D827D30084A465 /* singlestar_empty.png */,
+				3030A8F417D827D30084A465 /* singlestar_half.png */,
 				307B609B17D5A8E50008EE87 /* round-rating1-150-white.png */,
 				307B609C17D5A8E50008EE87 /* round-rating15-150-white.png */,
 				307B609D17D5A8E50008EE87 /* round-rating2-150-white.png */,
@@ -617,6 +626,7 @@
 				30BFEA4017D142BE00904F17 /* launcher-v2-1136.png in Resources */,
 				30F15E1117D1731E006C60B8 /* round-rating5-150.png in Resources */,
 				30BFEA3E17D142BE00904F17 /* launcher-v2-480.png in Resources */,
+				3030A8F617D827D30084A465 /* singlestar_empty.png in Resources */,
 				30F15E1017D1731E006C60B8 /* round-rating45-150.png in Resources */,
 				30DFA90117B1BD3D00B729FB /* BuildingListViewController.xib in Resources */,
 				30BFEA4D17D143FA00904F17 /* background-main-v2-dark-iphone4-blur.png in Resources */,
@@ -626,6 +636,7 @@
 				30FBDAE917D0F0D300872628 /* background-main-iphone4.png in Resources */,
 				30BFEA3F17D142BE00904F17 /* launcher-v2-960.png in Resources */,
 				30FBDAE717D0EE4100872628 /* background-main.png in Resources */,
+				3030A8F517D827D30084A465 /* singlestar_full.png in Resources */,
 				30BFEA4E17D143FA00904F17 /* background-main-v2-dark-iphone5-blur.png in Resources */,
 				307B60B017D5A8E50008EE87 /* round-rating05-150-white.png in Resources */,
 				307B60AC17D5A8E50008EE87 /* round-rating4-150-white.png in Resources */,
@@ -636,6 +647,7 @@
 				3065243217D00839001D9D7D /* url-s-yahoo-main-cafeteria.jpg in Resources */,
 				3065243017D00839001D9D7D /* bldg-urls-clear-tall.png in Resources */,
 				30F15E0E17D1731E006C60B8 /* round-rating35-150.png in Resources */,
+				3030A8F717D827D30084A465 /* singlestar_half.png in Resources */,
 				30F15E0917D1731E006C60B8 /* round-rating1-150.png in Resources */,
 				30DFA90B17B1BD7C00B729FB /* AccountSetupViewController.xib in Resources */,
 				3B610A2717CDDFD7000C94A3 /* url-s-yahoo-main-cafeteria.jpg in Resources */,
