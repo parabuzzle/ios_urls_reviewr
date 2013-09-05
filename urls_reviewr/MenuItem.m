@@ -9,6 +9,12 @@
 #import "MenuItem.h"
 #import "Comment.h"
 
+@interface MenuItem ()
+
+@property (nonatomic, assign) NSString *username;
+
+@end
+
 @implementation MenuItem
 
 + (NSMutableArray *)menuItemWithArray:(NSArray *)array {
@@ -45,6 +51,16 @@
     
 }
 
+- (id)init {
+    self = [super init];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    //[defaults setObject:self.username forKey:@"username"];
+    self.username = [defaults objectForKey:@"username"];
+    
+    return self;
+}
+
 - (NSString *)ratingImageName {
 
     NSString *starRating = [self stringFormattedRating];
@@ -75,13 +91,24 @@
 - (void)loadComments:(NSArray *)Json {
     self.commentsList = [[NSMutableArray alloc] init];
     
+    Comment *comment;
     for (int i=0; i<Json.count; i++) {
-        [self.commentsList addObject:[[Comment alloc] initWithDictionary:[Json objectAtIndex:i]]];
+        comment =[[Comment alloc] initWithDictionary:[Json objectAtIndex:i]];
+        if ([self isMyComment:comment]){
+            self.myComment = comment;
+            NSLog([NSString stringWithFormat:@"My comment %@", comment.text]);
+        }
+        [self.commentsList addObject:comment];
     }
 }
 
 - (void)addComment:(Comment *)comment {
     [self.commentsList addObject:comment];
+}
+
+- (BOOL)isMyComment:(Comment *)comment {
+    NSLog([NSString stringWithFormat:@"username: %@ comment user: %@", self.username, comment.username]);
+    return [self.username isEqualToString:comment.username];
 }
 
 @end

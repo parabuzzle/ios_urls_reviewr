@@ -27,6 +27,7 @@
 @property (nonatomic, strong) NSMutableArray *commentsList;
 @property (nonatomic, strong) NSString *createdAt;
 @property (nonatomic, strong) NSString *updatedAt;
+@property (nonatomic, assign) Comment *myComment;
 
 + (NSMutableArray *)menuItemWithArray:(NSArray *)array;
 + (MenuItem *)fromJSON:(NSDictionary *)JsonDictionary;
