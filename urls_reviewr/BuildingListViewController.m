@@ -34,6 +34,9 @@
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
         
+        UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadBuildingData)];
+        self.navigationItem.rightBarButtonItem = refreshButton;
+        
         NSString *image_name = @"background-purple-newlogo.png";
         self.view.clipsToBounds = YES;
         UIImage *backgroundImage = [UIImage imageNamed:image_name];
@@ -109,7 +112,7 @@
                     self.buildings = nil;
                     [self convertJsonToArray:json];
                     self.menusDocument.document = json;
-                    [[[UIAlertView alloc] initWithTitle:@"Today's Menu Not Found" message:[NSString stringWithFormat:@"There was no menu found for today. We have loaded the menu from %@", response[0]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+                    [[[UIAlertView alloc] initWithTitle:@"Today's Menu Not Found" message:[NSString stringWithFormat:@"There was no menu found for today. We have loaded the menu from\n%@", response[0]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
                     [self.tableView reloadData];
                 }failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
