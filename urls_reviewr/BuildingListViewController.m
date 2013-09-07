@@ -12,11 +12,11 @@
 #import "Building.h"
 #import "MMProgressHUD.h"
 #import "MMProgressHUDOverlayView.h"
+#import "MenusDocument.h"
 
 @interface BuildingListViewController ()
 
 @property (nonatomic, strong) NSMutableArray *buildings;
-- (void)loadBuildingData;
 
 @end
 
@@ -30,12 +30,10 @@
     if (self) {
         // Custom initialization
         self.title = @"Cafeterias";
-        
-        //[self loadBuildingData];
+        self.menusDocument = [MenusDocument instance];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
         
-        // Correctly sized image for device type.. there is probably a better way of doing this..
         NSString *image_name = @"background-purple-newlogo.png";
         self.view.clipsToBounds = YES;
         UIImage *backgroundImage = [UIImage imageNamed:image_name];
@@ -50,12 +48,7 @@
     [super viewDidLoad];
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 
@@ -107,7 +100,7 @@
     //Load data from backend server
     [[UrlsClient instance] buildingList:^(AFHTTPRequestOperation *operation, id response) {
         [self convertJsonToArray:response];
-        self.doc = response;
+        self.menusDocument.document = response;
         
         // This is a dirty way of getting the newest menu if there isn't a menu for "Today"
         if (self.buildings.count == 0) {
@@ -115,20 +108,18 @@
                 [[UrlsClient instance] buildingListForDate:response[0] success:^(AFHTTPRequestOperation *operation, id json) {
                     self.buildings = nil;
                     [self convertJsonToArray:json];
-                    self.doc = json;
+                    self.menusDocument.document = json;
                     [[[UIAlertView alloc] initWithTitle:@"Today's Menu Not Found" message:[NSString stringWithFormat:@"There was no menu found for today. We have loaded the menu from %@", response[0]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
                     [self.tableView reloadData];
                 }failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
         }
         
-        
         [self.tableView reloadData];
         [MMProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed ==========\n%@", error);
-        [MMProgressHUD dismissWithError:[NSString stringWithFormat:@"Error fetching from server, please try again later.\ncode=%d", error.code] title:@"Error" afterDelay:5];
-        //[MMProgressHUD dismissWithError:@"Error!" title:@"An Error occured"];
+        [MMProgressHUD dismissWithError:[NSString stringWithFormat:@"Error fetching from server, please try again later.\ncode=%d", error.code] title:@"Error" afterDelay:3];
     }];
 }
 
@@ -139,7 +130,6 @@
     for (int i=0; i < [JSON count]; i++) {
         [self.buildings addObject:[[[JSON objectAtIndex:i] allKeys] objectAtIndex:0]];
     }
-
 }
 
 #pragma mark - Table view delegate
@@ -149,7 +139,7 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildings objectAtIndex:indexPath.row] andDoc:self.doc];
+    self.menuListViewController = [[MenuListViewController alloc] initWithName:[self.buildings objectAtIndex:indexPath.row]];
  
     // Push the view controller.
     [self.navigationController pushViewController:menuListViewController animated:YES];

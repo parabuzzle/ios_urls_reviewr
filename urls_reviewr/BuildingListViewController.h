@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MenuListViewController.h"
+#import "MenusDocument.h"
 
 @interface BuildingListViewController : UITableViewController
 
 @property (nonatomic, retain) MenuListViewController *menuListViewController;
 @property (nonatomic, weak) IBOutlet UITableView *buildingTableView;
-@property (nonatomic, retain) NSArray *doc;
+@property (nonatomic, strong) MenusDocument *menusDocument;
+
+- (void)loadBuildingData;
 
 @end

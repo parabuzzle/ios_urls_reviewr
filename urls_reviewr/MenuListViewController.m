@@ -13,6 +13,10 @@
 #import "MenuItem.h"
 #import "UrlsClient.h"
 #import "MenuItemCell.h"
+#import "BuildingListViewController.h"
+#import "MenusDocument.h"
+#import "MMProgressHUD.h"
+#import "MMProgressHUDOverlayView.h"
 
 @interface MenuListViewController ()
 
@@ -43,15 +47,17 @@
     self.title = self.selectedBuidling;
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self loadMenuData];
 }
 
-- (id)initWithName:(NSString *)theName andDoc:(NSArray *)doc {
+- (id)initWithName:(NSString *)theName {
     self = [super initWithNibName:@"MenuListViewController" bundle:nil];
     if (self) {
+        self.menusDocument = [MenusDocument instance];
         self.selectedBuidling = [theName copy];
-        self.doc = doc;
-        [self loadMenuData];
         
+        UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadBuildingData)];
+        self.navigationItem.rightBarButtonItem = refreshButton;
         // Custom Background for Each Building
         NSString *image_name = @"peppers-clear.png";
         if ([self.selectedBuidling isEqual: @"Url's Cafe"]) {
@@ -156,18 +162,47 @@
 - (void)loadMenuData{
     
     //Load data from backend server
-    [[UrlsClient instance] todaysMenu:^(AFHTTPRequestOperation *operation, id response) {
+    //[[UrlsClient instance] todaysMenu:^(AFHTTPRequestOperation *operation, id response) {
     
         //NSLog(@"%@", response);
         //[self convertMenuJsonToArray:response];
-        [self convertMenuJsonToArray:self.doc];
-        [self.tableView reloadData];
     
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Failed ==========\n%@", error);
-    }];
+    //} failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    //    NSLog(@"Failed ==========\n%@", error);
+    //}];
+    [self convertMenuJsonToArray:self.menusDocument.document];
+    [self.tableView reloadData];
     
 }
+
+- (void)loadBuildingData {
+    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleFade];
+    [MMProgressHUD showWithTitle:@"Please Wait" status:@"Refreshing Data"];
+    //Load data from backend server
+    [[UrlsClient instance] buildingList:^(AFHTTPRequestOperation *operation, id response) {
+        [self convertMenuJsonToArray:response];
+        self.menusDocument.document = response;
+        
+        // This is a dirty way of getting the newest menu if there isn't a menu for "Today"
+        if (self.menusDocument.document.count == 0) {
+            [[UrlsClient instance] menuDates:^(AFHTTPRequestOperation *operation, id response) {
+                [[UrlsClient instance] buildingListForDate:response[0] success:^(AFHTTPRequestOperation *operation, id json) {
+                    [self convertMenuJsonToArray:json];
+                    self.menusDocument.document = json;
+                    [[[UIAlertView alloc] initWithTitle:@"Today's Menu Not Found" message:[NSString stringWithFormat:@"There was no menu found for today. We have loaded the menu from %@", response[0]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+                    [self.tableView reloadData];
+                }failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
+        }
+        
+        [self.tableView reloadData];
+        [MMProgressHUD dismiss];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failed ==========\n%@", error);
+        [MMProgressHUD dismissWithError:[NSString stringWithFormat:@"Error fetching from server, please try again later.\ncode=%d", error.code] title:@"Error" afterDelay:3];
+    }];
+}
+
 
 - (void)convertMenuJsonToArray:(id)JSON{
     

@@ -31,3 +31,9 @@
 #define COCOAPODS_VERSION_MINOR_MMProgressHUD 1
 #define COCOAPODS_VERSION_PATCH_MMProgressHUD 0
 
+// PullToRefresh
+#define COCOAPODS_POD_AVAILABLE_PullToRefresh
+#define COCOAPODS_VERSION_MAJOR_PullToRefresh 0
+#define COCOAPODS_VERSION_MINOR_PullToRefresh 0
+#define COCOAPODS_VERSION_PATCH_PullToRefresh 1
+

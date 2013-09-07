@@ -8,13 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "MenuItemCell.h"
+#import "MenusDocument.h"
 
 @interface MenuListViewController : UITableViewController
 
 @property (nonatomic, retain) NSString *selectedBuidling;
 @property (assign, nonatomic) IBOutlet MenuItemCell *menuItemCell;
-@property (nonatomic, retain) NSArray *doc;
+@property (nonatomic, retain) MenusDocument *menusDocument;
 
-- (id)initWithName:(NSString *)theName andDoc:(NSArray *)doc;
+- (id)initWithName:(NSString *)theName;
 
 @end
