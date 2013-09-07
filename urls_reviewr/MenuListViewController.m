@@ -55,6 +55,7 @@
     if (self) {
         self.menusDocument = [MenusDocument instance];
         self.selectedBuidling = [theName copy];
+        self.view.backgroundColor = [UIColor blackColor];
         
         UIBarButtonItem *refreshButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(loadBuildingData)];
         self.navigationItem.rightBarButtonItem = refreshButton;
@@ -74,6 +75,7 @@
         }
         UIImage *backgroundImage = [UIImage imageNamed:image_name];
         UIImageView *backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
+        backgroundView.alpha = 0.8;
         [backgroundView setFrame:CGRectMake(0,0,self.view.frame.size.width,self.view.frame.size.height)];
         [backgroundView setAutoresizingMask:UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin];
         self.tableView.backgroundView = backgroundView;
