@@ -32,6 +32,7 @@
 
 - (id)initWithName:(MenuItem *)menuItem{
     self = [super initWithNibName:@"MenuItemViewController" bundle:nil];
+    self.menusDocument = [MenusDocument instance];
     self.menuItem = menuItem;
     return self;
 }
@@ -109,19 +110,19 @@
     switch (result)
     {
         case MFMailComposeResultCancelled:
-            NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
+            //NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
             break;
         case MFMailComposeResultSaved:
-            NSLog(@"Mail saved: you saved the email message in the drafts folder.");
+            //NSLog(@"Mail saved: you saved the email message in the drafts folder.");
             break;
         case MFMailComposeResultSent:
-            NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
+            //NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
             break;
         case MFMailComposeResultFailed:
-            NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
+            //NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
             break;
         default:
-            NSLog(@"Mail not sent.");
+            //NSLog(@"Mail not sent.");
             break;
     }
     // Remove the mail view
@@ -169,7 +170,7 @@
     self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.stringFormattedRating];
     self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
     self.ratingsImageView.image = [UIImage imageNamed:self.menuItem.ratingImageName];
-    NSLog([NSString stringWithFormat:@"%@", self.menuItem.ratingImageName]);
+    //NSLog([NSString stringWithFormat:@"%@", self.menuItem.ratingImageName]);
 }
 
 @end

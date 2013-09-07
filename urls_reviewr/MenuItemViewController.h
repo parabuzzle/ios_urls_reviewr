@@ -9,12 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "MenuItem.h"
 #import "MenuItemCell.h"
+#import "MenusDocument.h"
 #import <MessageUI/MessageUI.h>
 
 @interface MenuItemViewController : UIViewController <MFMailComposeViewControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 
 @property (nonatomic, strong) MenuItem *menuItem;
+@property (nonatomic, strong) MenusDocument *menusDocument;
 @property (nonatomic, weak) IBOutlet UILabel *menuItemDescription;
 @property (nonatomic, weak) IBOutlet UILabel *menuItemName;
 @property (nonatomic, weak) IBOutlet UILabel *menuItemRating;

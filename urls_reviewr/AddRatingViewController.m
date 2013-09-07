@@ -11,6 +11,7 @@
 #import "MenuItem.h"
 #import "MenuItemViewController.h"
 #import "AccountSetupViewController.h"
+#import "MenusDocument.h"
 #import "User.h"
 
 @interface AddRatingViewController ()
@@ -26,6 +27,7 @@
 
 - (id)initWithMenuItem:(MenuItem *)menuItem andController:(MenuItemViewController *)viewController{
     self = [super init];
+    self.menusDocument = [MenusDocument instance];
     self.menuItem = menuItem;
     self.viewController = viewController;
     return self;
@@ -69,7 +71,7 @@
         [self.viewController reloadUI];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);
+        //NSLog([NSString stringWithFormat:@"Failed to post menu item\nError: %@", error]);
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Something Went Wrong" message:[NSString stringWithFormat:@"%@", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alert show];
     }];
