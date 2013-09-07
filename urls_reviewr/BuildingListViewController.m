@@ -10,8 +10,6 @@
 #import "MenuListViewController.h"
 #import "UrlsClient.h"
 #import "Building.h"
-#import "User.h"
-#import "AccountSetupViewController.h"
 #import "MMProgressHUD.h"
 #import "MMProgressHUDOverlayView.h"
 
@@ -19,7 +17,6 @@
 
 @property (nonatomic, strong) NSMutableArray *buildings;
 - (void)loadBuildingData;
-- (void)accountSetup;
 
 @end
 
@@ -59,18 +56,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self performSelector:@selector(accountSetup) withObject:nil afterDelay:1];
-}
-
-
-- (void)accountSetup {
-    User *user = [[User alloc] initLocal];
-    
-    if (user.userid == nil) {
-        AccountSetupViewController *accountView = [[AccountSetupViewController alloc] init];
-        // display accountsetup
-        [self presentViewController:accountView animated:YES completion:NULL];
-    }
 }
 
 
@@ -131,6 +116,7 @@
                     self.buildings = nil;
                     [self convertJsonToArray:json];
                     self.doc = json;
+                    [[[UIAlertView alloc] initWithTitle:@"Today's Menu Not Found" message:[NSString stringWithFormat:@"There was no menu found for today. We have loaded the menu from %@", response[0]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
                     [self.tableView reloadData];
                 }failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {}];

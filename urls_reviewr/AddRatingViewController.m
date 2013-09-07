@@ -10,12 +10,15 @@
 #import "UrlsClient.h"
 #import "MenuItem.h"
 #import "MenuItemViewController.h"
+#import "AccountSetupViewController.h"
+#import "User.h"
 
 @interface AddRatingViewController ()
 
 @property (nonatomic, strong) MenuItem *menuItem;
 @property (nonatomic, assign) float rating;
 @property (nonatomic, weak) MenuItemViewController *viewController;
+- (void)accountSetup;
 
 @end
 
@@ -76,6 +79,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self performSelector:@selector(accountSetup) withObject:nil afterDelay:0.5];
     // Do any additional setup after loading the view from its nib.
     self.rateView.notSelectedImage = [UIImage imageNamed:@"singlestar_empty.png"];
     self.rateView.halfSelectedImage = [UIImage imageNamed:@"singlestar_half.png"];
@@ -85,6 +89,16 @@
     self.rateView.maxRating = 5;
     self.rateView.delegate = self;
 
+}
+
+- (void)accountSetup {
+    User *user = [[User alloc] initLocal];
+    
+    if (user.userid == nil) {
+        AccountSetupViewController *accountView = [[AccountSetupViewController alloc] init];
+        // display accountsetup
+        [self presentViewController:accountView animated:YES completion:NULL];
+    }
 }
 
 - (void)didReceiveMemoryWarning
