@@ -15,6 +15,7 @@
 @interface MenuItemViewController ()
 
 - (void)shareItem;
+- (void)respondToTapGesture;
 
 @end
 
@@ -43,6 +44,9 @@
     // Do any additional setup after loading the view from its nib.
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addRating)];
     UIBarButtonItem *shareButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareItem)];
+    
+    [self setupButtonWithImage];
+    
     self.navigationItem.rightBarButtonItems = @[addButton, shareButton];
     self.menuItemDescription.numberOfLines = 0;
     [self.menuItemDescription sizeToFit];
@@ -53,6 +57,20 @@
     [self.commentsListView reloadData];
     [self loadMenuItemData];
 
+}
+
+- (void)setupButtonWithImage {
+    
+    [self.ratingImageButton setBackgroundColor:[UIColor clearColor]];
+    [self.ratingImageButton addTarget:self
+                      action:@selector(buttonClicked:)
+            forControlEvents:UIControlEventTouchDown];
+    
+}
+
+- (void)buttonClicked:(UIButton *)sender
+{
+    [self addRating];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +91,7 @@
     self.menuItemName.text = self.menuItem.title;
     self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.stringFormattedRating];
     self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
-    self.ratingsImageView.image = [UIImage imageNamed:self.menuItem.ratingImageName];
+    [self.ratingImageButton setImage:[UIImage imageNamed:self.menuItem.ratingImageName] forState:UIControlStateNormal];
     
     [[UrlsClient instance] getCommentsForMenuItem:self.menuItem success:^(AFHTTPRequestOperation *operation, id response) {
         NSLog(@"Successfully queried comments for menu item");
@@ -153,9 +171,13 @@
     
     // Configure the cell...
     cell.textLabel.numberOfLines = 0;
-    cell.textLabel.text = [[self.menuItem.commentsList objectAtIndex:indexPath.row] text];
-    cell.shouldIndentWhileEditing = YES;
-    [cell.textLabel sizeToFit];
+    NSString *commentText = [[self.menuItem.commentsList objectAtIndex:indexPath.row] text];
+    if(commentText.length > 0){
+        cell.textLabel.text = commentText;
+        cell.shouldIndentWhileEditing = YES;
+        [cell.textLabel sizeToFit];
+    }
+    
 //    cell.backgroundColor = [UIColor clearColor];
 //    cell.textLabel.textColor = [UIColor whiteColor];
 //    cell.textLabel.font = [UIFont boldSystemFontOfSize:18];
@@ -169,7 +191,7 @@
     [self.commentsListView reloadData];
     self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.stringFormattedRating];
     self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
-    self.ratingsImageView.image = [UIImage imageNamed:self.menuItem.ratingImageName];
+    [self.ratingImageButton setImage:[UIImage imageNamed:self.menuItem.ratingImageName] forState:UIControlStateNormal];
     //NSLog([NSString stringWithFormat:@"%@", self.menuItem.ratingImageName]);
 }
 

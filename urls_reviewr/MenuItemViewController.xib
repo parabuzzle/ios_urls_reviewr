@@ -12,7 +12,7 @@
                 <outlet property="menuItemName" destination="tyS-uk-dNe" id="ft2-h5-ZmD"/>
                 <outlet property="menuItemRating" destination="ncI-BM-OmN" id="5Ic-tU-2jh"/>
                 <outlet property="numberOfComments" destination="eH5-Ne-6NC" id="oiu-zY-SHo"/>
-                <outlet property="ratingsImageView" destination="iFo-72-y4U" id="bzh-2E-8yB"/>
+                <outlet property="ratingImageButton" destination="hcS-6b-iUE" id="gvW-fK-Ox3"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -21,15 +21,6 @@
             <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="round-rating5-special-150.png" translatesAutoresizingMaskIntoConstraints="NO" id="iFo-72-y4U">
-                    <rect key="frame" x="25" y="73" width="76" height="76"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <gestureRecognizers/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="plb-yl-vgh" appends="YES" id="5yW-l8-zmJ"/>
-                        <outletCollection property="gestureRecognizers" destination="plb-yl-vgh" appends="YES" id="37c-Td-P44"/>
-                    </connections>
-                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rgK-Be-Isw">
                     <rect key="frame" x="0.0" y="254" width="320" height="250"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,19 +72,25 @@
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcS-6b-iUE">
+                    <rect key="frame" x="25" y="73" width="75" height="77"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="Button" image="round-rating35-150.png">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
-        <tapGestureRecognizer id="plb-yl-vgh">
-            <connections>
-                <action selector="addRating" destination="-1" id="MxE-Dp-lMV"/>
-            </connections>
-        </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="round-rating5-special-150.png" width="36" height="36"/>
+        <image name="round-rating35-150.png" width="36" height="36"/>
     </resources>
 </document>

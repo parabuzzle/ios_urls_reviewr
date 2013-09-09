@@ -22,7 +22,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *menuItemRating;
 @property (nonatomic, weak) IBOutlet UILabel *numberOfComments;
 @property (nonatomic, weak) IBOutlet UITableView *commentsListView;
-@property (nonatomic, weak) IBOutlet UIImageView *ratingsImageView;
+@property (nonatomic, weak) IBOutlet UIButton *ratingImageButton;
 
 - (IBAction)addRating;
 

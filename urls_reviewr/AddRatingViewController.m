@@ -52,14 +52,16 @@
         return;
     }
     
-    if(self.textView.text.length < 1){
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Comment Missing" message:@"Please Add a Comment" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [alert show];
-        return;
+    Comment *comment = [[Comment alloc] init];
+    
+    if(self.textView.text.length > 0){
+        comment.text = self.textView.text;
+    } else {
+        comment.text = @"";
     }
     
-    Comment *comment = [[Comment alloc] init];
-    comment.text = self.textView.text;
+    
+    
     comment.menuItemId = [NSString stringWithFormat:@"%d", self.menuItem.menuItemId];
     NSString *rating = [NSString stringWithFormat:@"%f", self.rating];
     self.menuItem.rating = [NSNumber numberWithFloat:self.rating];
