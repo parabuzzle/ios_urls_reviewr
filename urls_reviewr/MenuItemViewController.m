@@ -115,8 +115,8 @@
     // http://api.reviewr.mail.vip.gq1.yahoo.net/menu_items/545 where 545 is the item's id
     MFMailComposeViewController *email = [[MFMailComposeViewController alloc] init];
     email.mailComposeDelegate = self;
-    [email setSubject:@"Check out this dish in the Cafe Today!"];
-    NSString *emailBody =[NSString stringWithFormat:@"Hey,\nCheck out this dish in the cafe today: http://api.reviewr.mail.vip.gq1.yahoo.net/menu_items/%ld", (long)self.menuItem.menuItemId];
+    [email setSubject:[NSString stringWithFormat:@"%@", self.menuItem.title.capitalizedString]];
+    NSString *emailBody =[NSString stringWithFormat:@"\n\n -%@-\n%@\n\nhttp://api.reviewr.mail.vip.gq1.yahoo.net/menu_items/%ld",self.menuItem.title.capitalizedString, self.menuItem.description, (long)self.menuItem.menuItemId];
     [email setMessageBody:emailBody isHTML:NO];
     [self presentViewController:email animated:YES completion:NULL];
                
