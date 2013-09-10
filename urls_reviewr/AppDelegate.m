@@ -25,14 +25,11 @@
  
     UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:buildingViewController];
     
-    //AccountSetupViewController *removeMe = [[AccountSetupViewController alloc] init];
-    //UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:removeMe];
     nvc.navigationBar.tintColor = [UIColor blackColor];
-    //nvc.navigationBar.backgroundColor = [UIColor blackColor];
-    nvc.navigationBar.translucent = YES;
+    // remove translucent because it breaks the pull to refresh control
+    //nvc.navigationBar.translucent = YES;
     
     self.window.rootViewController = nvc;
-    
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

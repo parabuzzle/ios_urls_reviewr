@@ -43,12 +43,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor purpleColor];
+    self.refreshControl = refreshControl;
+    [refreshControl addTarget:self action:@selector(loadBuildingData) forControlEvents:UIControlEventValueChanged];
     
     self.title = self.selectedBuidling;
 
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self loadMenuData];
 }
+
 
 - (id)initWithName:(NSString *)theName {
     self = [super initWithNibName:@"MenuListViewController" bundle:nil];
@@ -198,6 +203,7 @@
         }
         
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
         [MMProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed ==========\n%@", error);

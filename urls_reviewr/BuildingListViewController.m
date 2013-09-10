@@ -31,6 +31,11 @@
         // Custom initialization
         self.title = @"Cafeterias";
         self.menusDocument = [MenusDocument instance];
+        UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+        refreshControl.tintColor = [UIColor purpleColor];
+        self.refreshControl = refreshControl;
+        [refreshControl addTarget:self action:@selector(loadBuildingData) forControlEvents:UIControlEventValueChanged];
+        
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadBuildingData) name:UIApplicationDidBecomeActiveNotification object:nil];
         
@@ -119,6 +124,7 @@
         }
         
         [self.tableView reloadData];
+        [self.refreshControl endRefreshing];
         [MMProgressHUD dismiss];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failed ==========\n%@", error);
