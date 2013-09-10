@@ -189,6 +189,7 @@
 
 - (void)reloadUI {
     [self.commentsListView reloadData];
+    //[self.menusDocument.document objectAtIndex:]
     self.menuItemRating.text = [NSString stringWithFormat:@"%@/5", self.menuItem.stringFormattedRating];
     self.numberOfComments.text = [NSString stringWithFormat:@"%d reviewers", self.menuItem.reviewers];
     [self.ratingImageButton setImage:[UIImage imageNamed:self.menuItem.ratingImageName] forState:UIControlStateNormal];

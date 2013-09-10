@@ -52,7 +52,12 @@
         return;
     }
     
-    Comment *comment = [[Comment alloc] init];
+    Comment *comment;
+    if ([self.menuItem myComment]) {
+        comment = [self.menuItem myComment];
+    } else {
+        comment = [[Comment alloc] init];
+    }
     
     if(self.textView.text.length > 0){
         comment.text = self.textView.text;
@@ -60,16 +65,21 @@
         comment.text = @"";
     }
     
-    
-    
     comment.menuItemId = [NSString stringWithFormat:@"%d", self.menuItem.menuItemId];
     NSString *rating = [NSString stringWithFormat:@"%f", self.rating];
     self.menuItem.rating = [NSNumber numberWithFloat:self.rating];
     
     [[UrlsClient instance] postCommentsForMenuItem:comment withRating:rating success:^(AFHTTPRequestOperation *operation, id response) {
-        NSLog(@"Posting menu item");
-        [self.menuItem addComment:comment];
-        self.menuItem.reviewers++;
+        //NSLog(@"Posting menu item\n\n%@", response);
+        
+        NSDictionary *menuItemDictionary = [response objectForKey:@"item"];
+        self.menuItem.reviewers = [[menuItemDictionary objectForKey:@"reviewers"] integerValue];
+        self.menuItem.rating =  [NSNumber numberWithFloat:[[menuItemDictionary objectForKey:@"rating"] doubleValue]];
+        
+        if ([self.menuItem myComment].commentId > 0) {
+            [self.menuItem addComment:comment];
+        }
+        
         [self.viewController reloadUI];
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -92,6 +102,8 @@
     self.rateView.editable = YES;
     self.rateView.maxRating = 5;
     self.rateView.delegate = self;
+    
+    self.textView.text = [self.menuItem myComment].text;
 
 }
 

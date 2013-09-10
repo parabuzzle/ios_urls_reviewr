@@ -11,7 +11,7 @@
 
 @interface MenuItem ()
 
-@property (nonatomic, assign) NSString *username;
+@property (nonatomic, assign) NSString *userId;
 
 @end
 
@@ -55,8 +55,7 @@
     self = [super init];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //[defaults setObject:self.username forKey:@"username"];
-    self.username = [defaults objectForKey:@"username"];
+    self.userId = [defaults objectForKey:@"userid"];
     
     return self;
 }
@@ -90,13 +89,12 @@
 
 - (void)loadComments:(NSArray *)Json {
     self.commentsList = [[NSMutableArray alloc] init];
-    
     Comment *comment;
     for (int i=0; i<Json.count; i++) {
         comment =[[Comment alloc] initWithDictionary:[Json objectAtIndex:i]];
         if ([self isMyComment:comment]){
             self.myComment = comment;
-            NSLog([NSString stringWithFormat:@"My comment %@", comment.text]);
+            //NSLog([NSString stringWithFormat:@"My comment %@", comment.text]);
         }
         [self.commentsList addObject:comment];
     }
@@ -107,8 +105,7 @@
 }
 
 - (BOOL)isMyComment:(Comment *)comment {
-    NSLog([NSString stringWithFormat:@"username: %@ comment user: %@", self.username, comment.username]);
-    return [self.username isEqualToString:comment.username];
+    return self.userId == comment.userId;
 }
 
 @end
