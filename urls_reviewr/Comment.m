@@ -20,6 +20,7 @@
     self.updatedAt = [dictionary objectForKey:@"updated_at"];
     self.userId = [dictionary objectForKey:@"user_id"];
     self.username = [dictionary objectForKey:@"username"];
+    self.userRating = [[dictionary objectForKey:@"user_rating"] integerValue];
     
     return self;
 }

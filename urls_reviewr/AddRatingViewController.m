@@ -75,8 +75,9 @@
         NSDictionary *menuItemDictionary = [response objectForKey:@"item"];
         self.menuItem.reviewers = [[menuItemDictionary objectForKey:@"reviewers"] integerValue];
         self.menuItem.rating =  [NSNumber numberWithFloat:[[menuItemDictionary objectForKey:@"rating"] doubleValue]];
+        comment.userRating = [rating integerValue];
         
-        if ([self.menuItem myComment].commentId > 0) {
+        if ([self.menuItem myComment] == nil) {
             [self.menuItem addComment:comment];
         }
         
@@ -104,6 +105,10 @@
     self.rateView.delegate = self;
     
     self.textView.text = [self.menuItem myComment].text;
+    self.rateView.rating = [self.menuItem myComment].userRating;
+    if (self.rateView.rating > 0){
+        self.rating = self.rateView.rating;
+    }
 
 }
 
