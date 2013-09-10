@@ -174,6 +174,7 @@
     NSString *commentText = [[self.menuItem.commentsList objectAtIndex:indexPath.row] text];
     if(commentText.length > 0){
         cell.textLabel.text = commentText;
+        cell.textLabel.font = [UIFont systemFontOfSize:14];
         cell.shouldIndentWhileEditing = YES;
         [cell.textLabel sizeToFit];
     }
