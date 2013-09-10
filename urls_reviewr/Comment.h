@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *updatedAt;
 @property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSString *username;
+@property (nonatomic) NSInteger userRating;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 
